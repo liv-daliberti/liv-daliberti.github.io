@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Liv d'Aliberti",
+    "label": "Computer Science PhD Student",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "od2961@princeton.edu",
+    "phone": "(248) 462-3537",
+    "url": "https://liv-daliberti.github.io/",
+    "summary": "I'm a student at princeton.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
