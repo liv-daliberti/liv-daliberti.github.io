@@ -21,3 +21,5 @@ social: true # includes social icons at the bottom of the page
 I am a Computer Science Ph.D. student at Princeton University, advised by [Ben Eysenbach](https://ben-eysenbach.github.io/) and affiliated with the Princeton Reinforcement Learning (RL) Lab. My research focuses on the algorithmic development of efficient reinforcement learning algorithms to train flexible and robust agents.
 
 Prior to starting my Ph.D., I worked as a research scientist at [Leidos](https://www.leidos.com/) in their CTO Office Artificial Intelligence & Machine Learning Accelerator. I earned my Master of Science in [Applied Mathematics and Statistic](https://mathstat.georgetown.edu/graduate/testimonials/) in 2019. 
+
+I enjoy working with individuals who are passionate about their research and excited about the potential impact of their efforts. I'm hopeful that technology built using the research my colleagues and I develop will help make our world (and maybe other worlds) safer and better for humans -- it would be disappointing to end up in a Dune / Matrix / alternative distopian sci-fi book reality.
