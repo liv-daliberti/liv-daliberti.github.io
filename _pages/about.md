@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://www.cs.princeton.edu/'>Computer Science</a> Ph.D. Student at <a href='https://www.princeton.edu/'>Princeton University</a>.
 
 profile:
   align: right
