@@ -22,4 +22,6 @@ I am a Computer Science Ph.D. student at Princeton University, advised by [Ben E
 
 Prior to starting my Ph.D., I worked as a research scientist at [Leidos](https://www.leidos.com/) in their CTO Office Artificial Intelligence & Machine Learning Accelerator. I earned my Master of Science in [Applied Mathematics and Statistic](https://mathstat.georgetown.edu/graduate/testimonials/) in 2019. 
 
-I enjoy working with individuals who are passionate about their research and excited about the potential impact of their efforts. I'm hopeful that technology built using the research my colleagues and I develop will help make our world (and maybe other worlds) safer and better for humans -- it would be disappointing to end up in a Dune / Matrix / alternative distopian sci-fi book reality.
+I enjoy working with individuals who are passionate about their research and excited about the potential impacts of their efforts. I'm hopeful that technology built using the research that my research colleagues and I develop will help make our world (and maybe other worlds) safer and better for humans. 
+
+I really like all cats and one dog, my wife's cavapoo. In my spare time, I like hiking, backpacking, skiing, and going on adventures to new places.
