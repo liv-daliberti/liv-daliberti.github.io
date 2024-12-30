@@ -132,13 +132,6 @@ ninja.data = [{
           window.open("mailto:%6F%64%32%39%36%31@%70%72%69%6E%63%65%74%6F%6E.%65%64%75", "_blank");
         },
       },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.linkedin.com/in/liv-d-aliberti-89b546130", "_blank");
-        },
-      },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
