@@ -58,9 +58,9 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-i-left-my-great-job-to-become-a-ph-d-student",
+            },{id: "post-why-i-left-my-great-job-to-become-a-ph-d-student",
       
-        title: "I left my great job to become a Ph.D. student",
+        title: "Why I left my great job to become a Ph.D. student",
       
       description: "Life is two steps forward, and now, this is my one step back",
       section: "Posts",
