@@ -6,7 +6,7 @@
     "email": "od2961@princeton.edu",
     "phone": "(248) 462-3537",
     "url": "https://liv-daliberti.github.io/",
-    "summary": "I'm a student at princeton.",
+    "summary": "Excited to work as part of the Princeton RL Lab under Ben Eysenbach.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -16,21 +16,30 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "liv-d-aliberti-89b546130",
+        "url": "https://www.linkedin.com/in/liv-d-aliberti-89b546130/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Ph.D. Student",
+      "position": "Princeton RL Lab",
+      "url": "https://princeton-rl.github.io/",
+      "startDate": "2024-08-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": ["Reinforcement Learning", "Computer Science"]
+    },
+    {
+      "name": "Leidos Inc",
+      "position": "Senior AIML Researcher",
+      "url": "https://www.leidos.com/ai",
+      "startDate": "2019-06-04",
+      "endDate": "2024-08-01",
+      "summary": "",
+      "highlights": ["Graph-based Reinforcement Learning System", "Privacy Enhancing Technologies", "Rapid Progressive Learning-based Object Detection", "ML Engineering", "AutoML", "Hyperdimensional Computing", "Intern Program Management", "Principal Investigator"]
     }
   ],
   "volunteer": [
