@@ -1,18 +1,18 @@
 {
   "basics": {
-    "name": "Liv d'Aliberti",
+    "name": "Liv Galliker d’Aliberti",
     "label": "Computer Science PhD Student",
     "image": "",
     "email": "od2961@princeton.edu",
-    "phone": "(248) 462-3537",
+    "phone": "(+1) 248 462 3537",
     "url": "https://liv-daliberti.github.io/",
     "summary": "Excited to work as part of the Princeton RL Lab under Ben Eysenbach.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "11 Hart Ave",
+      "city": "Princeton",
+      "region": "New Jersey",
       "countryCode": "US",
-      "region": "California"
+      "postalCode": ""
     },
     "profiles": [
       {
@@ -24,186 +24,173 @@
   },
   "work": [
     {
-      "name": "Ph.D. Student",
-      "position": "Princeton RL Lab",
+      "name": "Princeton RL Lab",
+      "position": "Ph.D. Student",
       "url": "https://princeton-rl.github.io/",
       "startDate": "2024-08-01",
-      "endDate": "",
-      "summary": "",
-      "highlights": ["Reinforcement Learning", "Computer Science"]
+      "summary": "Researching reinforcement learning and machine learning ethics.",
+      "highlights": ["Reinforcement Learning", "Privacy-Preserving Machine Learning"]
     },
     {
       "name": "Leidos Inc",
       "position": "Senior AIML Researcher",
       "url": "https://www.leidos.com/ai",
-      "startDate": "2019-06-04",
+      "startDate": "2019-06-01",
       "endDate": "2024-08-01",
-      "summary": "",
-      "highlights": ["Graph-based Reinforcement Learning System", "Privacy Enhancing Technologies", "Rapid Progressive Learning-based Object Detection", "ML Engineering", "AutoML", "Hyperdimensional Computing", "Intern Program Management", "Principal Investigator"]
-    }
-  ],
-  "volunteer": [
+      "summary": "Led AI/ML research projects and contributed to major corporate initiatives.",
+      "highlights": [
+        "C4ISR Graph-based Reinforcement Learning System",
+        "Privacy Enhancing Technologies",
+        "Intern Program Management",
+        "Principal Investigator for various AI/ML initiatives"
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Model B",
+      "position": "Data Analyst",
+      "url": "",
+      "startDate": "2018-05-01",
+      "endDate": "2019-06-01",
+      "summary": "Developed data analytics platforms for campaign-based marketing data.",
+      "highlights": []
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "institution": "Princeton University",
+      "area": "Computer Science",
+      "studyType": "Ph.D.",
+      "startDate": "2024-08-01",
+      "endDate": "",
+      "url": "https://www.princeton.edu/",
+      "score": "",
+      "courses": []
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "institution": "Georgetown University",
+      "area": "Mathematics & Statistics",
+      "studyType": "M.S.",
+      "startDate": "2018-01-01",
+      "endDate": "2019-12-30",
+      "url": "https://www.georgetown.edu/",
+      "score": "",
+      "courses": []
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "institution": "Georgetown University",
+      "area": "History (Honors) & Mathematics",
+      "studyType": "B.A. & B.S.",
+      "startDate": "2013-08-01",
+      "endDate": "2017-05-01",
+      "url": "https://www.georgetown.edu/",
+      "score": "",
+      "courses": []
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": ["Python", "R", "C++", "Java"]
     }
   ],
-  "languages": [
+  "publications": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "name": "Explainability for Unmanned Aerial Vehicle Control via Multi-Objective Reinforcement Learning",
+      "publisher": "IEEE Aerospace",
+      "releaseDate": "2024",
+      "url": "",
+      "summary": "Pre-print publication on explainability in reinforcement learning."
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "name": "Preserving Patient Privacy during Computation over Shared Electronic Health Record Data",
+      "publisher": "Springer Nature Journal of Medical Systems",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1007/s10916-022-01865-5",
+      "summary": "Explores privacy-preserving techniques for EHR data."
+    },
+    {
+      "name": "BlindFL: Segmented Federated Learning with Fully Homomorphic Encryption",
+      "publisher": "Proceedings on Privacy Enhancing Technologies (PoPet 2025)",
+      "releaseDate": "2025",
+      "url": "",
+      "summary": "Pre-print on federated learning and encryption techniques."
+    },
+    {
+      "name": "Privacy-Enhancing Technologies for AI Systems: A Tutorial",
+      "publisher": "10th ACM International Workshop on Security and Privacy Analytics (IWSPA 2024)",
+      "releaseDate": "2024",
+      "url": "https://doi.org/10.1145/3643651.3659889",
+      "summary": "Tutorial on privacy-enhancing technologies for AI systems."
+    },
+    {
+      "name": "Hyperdimensional Computing Encoding Schemes for Improved Image Classification",
+      "publisher": "IEEE 2022 International Symposium on Technologies for Homeland Security",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1109/HST56032.2022.10024980",
+      "summary": "Exploration of hyperdimensional computing encoding schemes."
+    },
+    {
+      "name": "Enabling Fully Homomorphic Encryption with Amazon SageMaker Endpoints for Secure, Real-Time Inferencing",
+      "publisher": "AWS Machine Learning Blog",
+      "releaseDate": "2023",
+      "url": "https://aws.amazon.com/blogs/machine-learning/enable-fully-homomorphic-encryption-with-amazon-sagemaker-endpoints-for-secure-real-time-inferencing/",
+      "summary": "Implementation of homomorphic encryption with SageMaker."
+    },
+    {
+      "name": "Large Language Model Inference over Confidential Data Using AWS Nitro Enclaves",
+      "publisher": "AWS Machine Learning Blog",
+      "releaseDate": "2024",
+      "url": "https://aws.amazon.com/blogs/machine-learning/large-language-model-inference-over-confidential-data-using-aws-nitro-enclaves/",
+      "summary": "Utilizing AWS Nitro Enclaves for confidential data inference."
+    },
+    {
+      "name": "Privacy-Enhancing Technologies: Protecting Data In Use",
+      "publisher": "Leidos Insights Blog",
+      "releaseDate": "2023",
+      "url": "https://www.leidos.com/sites/leidos/files/2023-07/D-23-15149_Privacy-Enhancing%20Technologies%20(PET)%20White%20Paper.pdf",
+      "summary": "Discussion on protecting data in use with privacy-enhancing technologies."
+    },
+    {
+      "name": "Leidos Researchers Compete to Develop the Best Unmanned Surface Vessel Models",
+      "publisher": "Leidos Insights Blog",
+      "releaseDate": "2023",
+      "url": "https://www.leidos.com/insights/leidos-researchers-compete-develop-best-unmanned-surface-vessel-model",
+      "summary": "Highlighting competitions for unmanned surface vessel models."
+    },
+    {
+      "name": "Effects of a Resident-Led Subject Exam Review on Mean Scores of Internal Medicine Subject Exam: A Case-Control Study",
+      "publisher": "Med. Scie. Edu.",
+      "releaseDate": "2020",
+      "url": "https://doi.org/10.1007/s40670-020-01157-y",
+      "summary": "Study on the effects of resident-led reviews on exam performance."
+    },
+    {
+      "name": "Pre-Endoscopic Intubation for Emergent GI Bleeding Associated With Increased Adverse Outcomes",
+      "publisher": "The American Journal of Gastroenterology",
+      "releaseDate": "2020",
+      "url": "https://doi.org/10.14309/01.ajg.0000704332.17755.ab",
+      "summary": "Analysis of adverse outcomes from pre-endoscopic intubation."
+    }
+  ],
+  "awards": [
+    {
+      "title": "Leidos CTO Office Purple Dollar Award",
+      "date": "2024",
+      "awarder": "Leidos",
+      "summary": "Received for successful transition of internal research to customer-paid projects."
+    },
+    {
+      "title": "Leadership, Excellence in Integrity: Rising Star",
+      "date": "2021",
+      "awarder": "Leidos Annual Achievement Award",
+      "summary": "Recognized for leadership potential."
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Machine Learning",
+      "keywords": ["Reinforcement Learning", "Ethical AI", "Privacy-Preserving ML"]
     }
   ]
 }
