@@ -58,7 +58,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-why-i-left-my-great-job-to-become-a-ph-d-student",
+            },{id: "post-cryptography-and-improved-analysis",
+      
+        title: "Cryptography and Improved Analysis",
+      
+      description: "Final Project",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/Cryptography/";
+        
+      },
+    },{id: "post-why-i-left-my-great-job-to-become-a-ph-d-student",
       
         title: "Why I left my great job to become a Ph.D. student",
       
