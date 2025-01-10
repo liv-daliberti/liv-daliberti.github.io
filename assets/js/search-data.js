@@ -58,9 +58,9 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-cryptography-and-improved-analysis",
+            },{id: "post-improved-analysis-cryptography-and-advanced-algorithm-design",
       
-        title: "Cryptography and Improved Analysis",
+        title: "Improved Analysis - Cryptography and Advanced Algorithm Design",
       
       description: "Final Project",
       section: "Posts",
