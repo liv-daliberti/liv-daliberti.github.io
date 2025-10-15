@@ -83,8 +83,8 @@ ninja.data = [{
     },{id: "news-start-my-computer-science-ph-d-at-princeton-university",
           title: 'Start my Computer Science Ph.D. at Princeton University!',
           description: "",
-          section: "News",},{id: "news-workshop-paper-accepted-to-law-2025-bridging-language-agent-and-world-models-see-you-in-san-diego-december-7th",
-          title: 'Workshop paper accepted to LAW 2025: Bridging Language, Agent, and World Models. See...',
+          section: "News",},{id: "news-workshop-paper-accepted-law-2025-neurips",
+          title: 'Workshop paper accepted @ LAW 2025, NeurIPS',
           description: "",
           section: "News",},{
         id: 'social-email',
