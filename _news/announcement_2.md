@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Workshop paper accepted to LAW 2025: Bridging Language, Agent, and World Models. See you in San Diego, December 7th!
+Workshop paper accepted @ LAW 2025, NeurIPS
