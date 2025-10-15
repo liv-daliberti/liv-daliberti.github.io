@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Room 320C, the Messiest Cubical</p>
+    <p>Room 320C</p>
     <p>Sherrerd Hall</p>
     <p>Princeton, NJ, 08544</p>
 
