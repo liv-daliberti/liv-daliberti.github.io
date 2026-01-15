@@ -6,6 +6,7 @@ description: A record of courses that I've taught over the years by semester.
 nav: true
 nav_order: 6
 ---
+
 <div class="teaching-list">
   <div class="card mb-3 p-3">
     <div class="d-flex flex-column flex-md-row justify-content-between">
@@ -131,4 +132,3 @@ nav_order: 6
     </div>
   </div>
 </div>
-
