@@ -89,6 +89,9 @@ ninja.data = [{
           section: "News",},{id: "news-workshop-paper-accepted-poster-at-wmw-2026-feb-4-6-2026-mila",
           title: 'Workshop paper accepted (poster) at WMW 2026 (Feb 4-6, 2026, Mila).',
           description: "",
+          section: "News",},{id: "news-preprint-released-the-illusion-of-insight-in-reasoning-models-submitted-jan-2-2026",
+          title: 'Preprint released: The Illusion of Insight in Reasoning Models (submitted Jan 2, 2026)....',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
