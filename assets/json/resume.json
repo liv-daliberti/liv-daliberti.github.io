@@ -29,10 +29,7 @@
       "url": "https://princeton-rl.github.io/",
       "startDate": "2024-08-01",
       "summary": "Researching reinforcement learning and machine learning ethics.",
-      "highlights": [
-        "Reinforcement Learning",
-        "Privacy-Preserving Machine Learning"
-      ]
+      "highlights": ["Reinforcement Learning", "Privacy-Preserving Machine Learning"]
     },
     {
       "name": "Leidos Inc",
@@ -94,9 +91,7 @@
     {
       "name": "Programming Languages",
       "level": "",
-      "keywords": [
-        "Python, R, C++, Java"
-      ]
+      "keywords": ["Python, R, C++, Java"]
     }
   ],
   "publications": [
@@ -209,11 +204,7 @@
   "interests": [
     {
       "name": "Machine Learning",
-      "keywords": [
-        "Reinforcement Learning",
-        "Ethical AI",
-        "Privacy-Preserving ML"
-      ]
+      "keywords": ["Reinforcement Learning", "Ethical AI", "Privacy-Preserving ML"]
     }
   ]
 }
