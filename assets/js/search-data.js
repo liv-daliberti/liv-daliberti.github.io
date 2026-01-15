@@ -93,6 +93,9 @@ ninja.data = [{
           section: "News",},{id: "news-workshop-paper-accepted-poster-at-wmw-2026-feb-4-6-2026-mila",
           title: 'Workshop paper accepted (poster) at WMW 2026 (Feb 4-6, 2026, Mila).',
           description: "",
+          section: "News",},{id: "news-workshop-paper-accepted-law-2025-neurips-accepted-aug-22-2025-workshop-dec-7-2025-san-diego-convention-center",
+          title: 'Workshop paper accepted @ LAW 2025, NeurIPS (accepted Aug 22, 2025; workshop Dec...',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
@@ -105,7 +108,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6F%64%32%39%36%31@%70%72%69%6E%63%65%74%6F%6E.%65%64%75", "_blank");
+          window.open("mailto:%6C%69%76.%64%61%6C%69%62%65%72%74%69@%70%72%69%6E%63%65%74%6F%6E.%65%64%75", "_blank");
         },
       },{
         id: 'social-linkedin',
@@ -120,6 +123,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://orcid.org/0000-0002-3139-5960", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=wNgmnzQAAAAJ", "_blank");
         },
       },{
         id: 'social-x',
