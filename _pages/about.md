@@ -20,13 +20,6 @@ social: true # includes social icons at the bottom of the page
 
 I am a Computer Science Ph.D. student at Princeton University, advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the Humans and Machines (HAM) Lab and the Princeton Reinforcement Learning Lab. My research focuses on making AI reasoning and decision-making reliable, interpretable, and empirically grounded at scale.
 
-<div class="featured-preprint">
-  <p><strong>Featured preprint:</strong> <a href="https://arxiv.org/abs/2601.00514">The Illusion of Insight in Reasoning Models</a> (arXiv: 2601.00514)</p>
-  <a href="https://arxiv.org/abs/2601.00514">
-    {% include figure.liquid path="assets/img/publication_preview/illusion-insight.png" class="img-fluid z-depth-1 rounded" alt="The Illusion of Insight in Reasoning Models figure" %}
-  </a>
-</div>
-
 Prior to starting my Ph.D., I worked as a research scientist at [Leidos](https://www.leidos.com/) in their CTO Office Artificial Intelligence & Machine Learning Accelerator. I earned my Master of Science in [Applied Mathematics and Statistics](https://mathstat.georgetown.edu/graduate/testimonials/) in 2019. 
 
 I enjoy working with individuals who are passionate about their research and excited about the potential impacts of their efforts. I'm hopeful that technology built using the research that my colleagues and I develop will help make our world (and maybe other worlds) safer and better for humans. 
