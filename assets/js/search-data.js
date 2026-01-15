@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -90,11 +83,11 @@ ninja.data = [{
     },{id: "news-start-my-computer-science-ph-d-at-princeton-university",
           title: 'Start my Computer Science Ph.D. at Princeton University!',
           description: "",
-          section: "News",},{id: "news-workshop-paper-accepted-poster-at-wmw-2026-feb-4-6-2026-mila",
-          title: 'Workshop paper accepted (poster) at WMW 2026 (Feb 4-6, 2026, Mila).',
-          description: "",
           section: "News",},{id: "news-workshop-paper-accepted-law-2025-neurips-accepted-aug-22-2025-workshop-dec-7-2025-san-diego-convention-center",
           title: 'Workshop paper accepted @ LAW 2025, NeurIPS (accepted Aug 22, 2025; workshop Dec...',
+          description: "",
+          section: "News",},{id: "news-workshop-paper-accepted-poster-at-wmw-2026-feb-4-6-2026-mila",
+          title: 'Workshop paper accepted (poster) at WMW 2026 (Feb 4-6, 2026, Mila).',
           description: "",
           section: "News",},{
         id: 'social-bluesky',
