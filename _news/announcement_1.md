@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Start my Computer Science Ph.D. at Princeton University!
+Start my Computer Science Ph.D. at <a href="https://citp.princeton.edu/people/liv-daliberti">Princeton University</a>!
