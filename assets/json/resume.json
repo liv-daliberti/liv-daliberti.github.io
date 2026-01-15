@@ -29,7 +29,10 @@
       "url": "https://princeton-rl.github.io/",
       "startDate": "2024-08-01",
       "summary": "Researching reinforcement learning and machine learning ethics.",
-      "highlights": ["Reinforcement Learning", "Privacy-Preserving Machine Learning"]
+      "highlights": [
+        "Reinforcement Learning",
+        "Privacy-Preserving Machine Learning"
+      ]
     },
     {
       "name": "Leidos Inc",
@@ -78,7 +81,7 @@
     },
     {
       "institution": "Georgetown University",
-      "area": "History (Honors) & Mathematics",
+      "area": "History (Honors) & Mathematics, Minor in Economics",
       "studyType": "B.A. & B.S.",
       "startDate": "2013-08-01",
       "endDate": "2017-05-01",
@@ -91,86 +94,102 @@
     {
       "name": "Programming Languages",
       "level": "",
-      "keywords": ["Python", "R", "C++", "Java"]
+      "keywords": [
+        "Python, R, C++, Java"
+      ]
     }
   ],
   "publications": [
     {
+      "name": "The Illusion of Insight in Reasoning Models",
+      "publisher": "arXiv",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/abs/2601.00514",
+      "summary": ""
+    },
+    {
       "name": "Explainability for Unmanned Aerial Vehicle Control via Multi-Objective Reinforcement Learning",
-      "publisher": "IEEE Aerospace",
-      "releaseDate": "2024",
-      "url": "",
-      "summary": "Pre-print publication on explainability in reinforcement learning."
+      "publisher": "2025 IEEE Aerospace Conference",
+      "releaseDate": "2025",
+      "url": "https://ieeexplore.ieee.org/document/11068676",
+      "summary": ""
     },
     {
       "name": "Preserving Patient Privacy during Computation over Shared Electronic Health Record Data",
       "publisher": "Springer Nature Journal of Medical Systems",
       "releaseDate": "2022",
       "url": "https://doi.org/10.1007/s10916-022-01865-5",
-      "summary": "Explores privacy-preserving techniques for EHR data."
+      "summary": ""
     },
     {
       "name": "BlindFL: Segmented Federated Learning with Fully Homomorphic Encryption",
-      "publisher": "Proceedings on Privacy Enhancing Technologies (PoPet 2025)",
+      "publisher": "Pre-Print",
       "releaseDate": "2025",
       "url": "",
-      "summary": "Pre-print on federated learning and encryption techniques."
+      "summary": ""
     },
     {
       "name": "Privacy-Enhancing Technologies for AI Systems: A Tutorial",
-      "publisher": "10th ACM International Workshop on Security and Privacy Analytics (IWSPA 2024)",
+      "publisher": "Proceedings of the 10th ACM International Workshop on Security and Privacy Analytics (IWSPA)",
       "releaseDate": "2024",
       "url": "https://doi.org/10.1145/3643651.3659889",
-      "summary": "Tutorial on privacy-enhancing technologies for AI systems."
+      "summary": ""
     },
     {
       "name": "Hyperdimensional Computing Encoding Schemes for Improved Image Classification",
       "publisher": "IEEE 2022 International Symposium on Technologies for Homeland Security",
       "releaseDate": "2022",
       "url": "https://doi.org/10.1109/HST56032.2022.10024980",
-      "summary": "Exploration of hyperdimensional computing encoding schemes."
+      "summary": ""
     },
     {
       "name": "Enabling Fully Homomorphic Encryption with Amazon SageMaker Endpoints for Secure, Real-Time Inferencing",
       "publisher": "AWS Machine Learning Blog",
       "releaseDate": "2023",
       "url": "https://aws.amazon.com/blogs/machine-learning/enable-fully-homomorphic-encryption-with-amazon-sagemaker-endpoints-for-secure-real-time-inferencing/",
-      "summary": "Implementation of homomorphic encryption with SageMaker."
+      "summary": ""
+    },
+    {
+      "name": "Grounded-Retrieval Adversarial Imitation Loop: Integrating Language, Agent, and World Models",
+      "publisher": "NeurIPS 2025 Workshop on Bridging Language, Agent, and World Models for Reasoning and Planning",
+      "releaseDate": "2025",
+      "url": "https://openreview.net/forum?id=MdmszyLpVu",
+      "summary": ""
     },
     {
       "name": "Large Language Model Inference over Confidential Data Using AWS Nitro Enclaves",
       "publisher": "AWS Machine Learning Blog",
       "releaseDate": "2024",
       "url": "https://aws.amazon.com/blogs/machine-learning/large-language-model-inference-over-confidential-data-using-aws-nitro-enclaves/",
-      "summary": "Utilizing AWS Nitro Enclaves for confidential data inference."
+      "summary": ""
     },
     {
       "name": "Privacy-Enhancing Technologies: Protecting Data In Use",
       "publisher": "Leidos Insights Blog",
       "releaseDate": "2023",
       "url": "https://www.leidos.com/sites/leidos/files/2023-07/D-23-15149_Privacy-Enhancing%20Technologies%20(PET)%20White%20Paper.pdf",
-      "summary": "Discussion on protecting data in use with privacy-enhancing technologies."
+      "summary": ""
     },
     {
       "name": "Leidos Researchers Compete to Develop the Best Unmanned Surface Vessel Models",
       "publisher": "Leidos Insights Blog",
       "releaseDate": "2023",
       "url": "https://www.leidos.com/insights/leidos-researchers-compete-develop-best-unmanned-surface-vessel-model",
-      "summary": "Highlighting competitions for unmanned surface vessel models."
+      "summary": ""
     },
     {
       "name": "Effects of a Resident-Led Subject Exam Review on Mean Scores of Internal Medicine Subject Exam: A Case-Control Study",
       "publisher": "Med. Scie. Edu.",
       "releaseDate": "2020",
       "url": "https://doi.org/10.1007/s40670-020-01157-y",
-      "summary": "Study on the effects of resident-led reviews on exam performance."
+      "summary": ""
     },
     {
       "name": "Pre-Endoscopic Intubation for Emergent GI Bleeding Associated With Increased Adverse Outcomes",
       "publisher": "The American Journal of Gastroenterology",
       "releaseDate": "2020",
       "url": "https://doi.org/10.14309/01.ajg.0000704332.17755.ab",
-      "summary": "Analysis of adverse outcomes from pre-endoscopic intubation."
+      "summary": ""
     }
   ],
   "awards": [
@@ -190,7 +209,11 @@
   "interests": [
     {
       "name": "Machine Learning",
-      "keywords": ["Reinforcement Learning", "Ethical AI", "Privacy-Preserving ML"]
+      "keywords": [
+        "Reinforcement Learning",
+        "Ethical AI",
+        "Privacy-Preserving ML"
+      ]
     }
   ]
 }
