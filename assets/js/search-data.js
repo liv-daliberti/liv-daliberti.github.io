@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-patents",
+          title: "patents",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/patents/";
+          },
         },{id: "nav-teaching",
           title: "teaching",
           description: "A record of courses that I&#39;ve taught over the years by semester.",
@@ -83,10 +90,17 @@ ninja.data = [{
     },{id: "news-start-my-computer-science-ph-d-at-princeton-university",
           title: 'Start my Computer Science Ph.D. at Princeton University!',
           description: "",
-          section: "News",},{id: "news-workshop-paper-accepted-law-2025-neurips",
-          title: 'Workshop paper accepted @ LAW 2025, NeurIPS',
+          section: "News",},{id: "news-workshop-paper-accepted-poster-at-wmw-2026-feb-4-6-2026-mila",
+          title: 'Workshop paper accepted (poster) at WMW 2026 (Feb 4-6, 2026, Mila).',
           description: "",
           section: "News",},{
+        id: 'social-bluesky',
+        title: 'Bluesky',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://bsky.app/profile/liv-daliberti.bsky.social", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -106,6 +120,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://orcid.org/0000-0002-3139-5960", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/livdaliberti", "_blank");
         },
       },{
       id: 'light-theme',
