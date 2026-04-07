@@ -92,6 +92,9 @@ ninja.data = [{
           section: "News",},{id: "news-preprint-released-the-illusion-of-insight-in-reasoning-models-submitted-jan-2-2026",
           title: 'Preprint released: The Illusion of Insight in Reasoning Models (submitted Jan 2, 2026)....',
           description: "",
+          section: "News",},{id: "news-paper-accepted-to-findings-of-acl-the-illusion-of-insight-in-reasoning-models",
+          title: 'Paper accepted to Findings of ACL: The Illusion of Insight in Reasoning Models....',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
