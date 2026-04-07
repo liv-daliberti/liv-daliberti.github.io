@@ -198,6 +198,9 @@
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
+      {% if entry.post %}
+        <a href="{{ entry.post }}" class="btn btn-sm z-depth-0" role="button">Post</a>
+      {% endif %}
       {% if entry.paper %}
         <a href="{{ entry.paper }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
       {% endif %}
