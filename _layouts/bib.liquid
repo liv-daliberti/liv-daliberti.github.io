@@ -78,8 +78,14 @@
         {%- endif -%}
 
         {%- if forloop.length > 1 -%}
-          {% if forloop.first == false and forloop.length > 2 %},&nbsp;{% endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
+          {% if forloop.first == false %}
+            {% if forloop.last and author_array_limit == author_array_size %}
+              {% if forloop.length > 2 %},&nbsp;{% else %}&nbsp;{% endif -%}
+              and&nbsp;
+            {% else %}
+              ,&nbsp;
+            {% endif %}
+          {% endif %}
         {% endif %}
         {%- if author_is_self -%}
           <em>
