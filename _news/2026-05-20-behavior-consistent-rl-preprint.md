@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: <a href="https://arxiv.org/abs/2605.21214">Behavior-Consistent Deep Reinforcement Learning</a> (submitted May 20, 2026).
+Preprint released: <a href="https://arxiv.org/abs/2605.21214">Behavior-Consistent Deep Reinforcement Learning</a>.
