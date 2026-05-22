@@ -24,12 +24,12 @@
   },
   "work": [
     {
-      "name": "Princeton RL Lab",
+      "name": "Humans and Machines Lab",
       "position": "Ph.D. Student",
-      "url": "https://princeton-rl.github.io/",
+      "url": "https://hamlab.princeton.edu/",
       "startDate": "2024-08-01",
-      "summary": "Researching reinforcement learning and machine learning ethics.",
-      "highlights": ["Reinforcement Learning", "Privacy-Preserving Machine Learning"]
+      "summary": "Researching reliable, interpretable, and empirically grounded AI reasoning and decision-making.",
+      "highlights": ["AI Reasoning", "Decision-Making", "Interpretability"]
     },
     {
       "name": "Leidos Inc",
