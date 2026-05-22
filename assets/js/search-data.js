@@ -101,6 +101,9 @@ ninja.data = [{
           section: "News",},{id: "news-paper-accepted-to-findings-of-acl-the-illusion-of-insight-in-reasoning-models",
           title: 'Paper accepted to Findings of ACL: The Illusion of Insight in Reasoning Models....',
           description: "",
+          section: "News",},{id: "news-preprint-released-behavior-consistent-deep-reinforcement-learning-submitted-may-20-2026",
+          title: 'Preprint released: Behavior-Consistent Deep Reinforcement Learning (submitted May 20, 2026).',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
