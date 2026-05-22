@@ -6,7 +6,7 @@
     "email": "liv.daliberti@princeton.edu",
     "phone": "(+1) 248 462 3537",
     "url": "https://liv-daliberti.github.io/",
-    "summary": "Excited to work as part of the Humans and Machines Lab under Manoel Ribeiro.",
+    "summary": "Computer Science Ph.D. student at Princeton University, advised by Manoel Horta Ribeiro and affiliated with the Humans and Machines Lab. My research focuses on reliable, interpretable, and empirically grounded AI reasoning and decision-making.",
     "location": {
       "address": "11 Hart Ave",
       "city": "Princeton",
@@ -96,8 +96,15 @@
   ],
   "publications": [
     {
+      "name": "Behavior-Consistent Deep Reinforcement Learning",
+      "publisher": "arXiv preprint arXiv:2605.21214",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/abs/2605.21214",
+      "summary": ""
+    },
+    {
       "name": "The Illusion of Insight in Reasoning Models",
-      "publisher": "arXiv",
+      "publisher": "arXiv preprint arXiv:2601.00514",
       "releaseDate": "2026",
       "url": "https://arxiv.org/abs/2601.00514",
       "summary": ""
@@ -118,14 +125,14 @@
     },
     {
       "name": "BlindFL: Segmented Federated Learning with Fully Homomorphic Encryption",
-      "publisher": "Pre-Print",
+      "publisher": "arXiv preprint arXiv:2501.11659",
       "releaseDate": "2025",
-      "url": "",
+      "url": "https://arxiv.org/abs/2501.11659",
       "summary": ""
     },
     {
       "name": "Privacy-Enhancing Technologies for AI Systems: A Tutorial",
-      "publisher": "Proceedings of the 10th ACM International Workshop on Security and Privacy Analytics (IWSPA)",
+      "publisher": "Proceedings of the 10th ACM International Workshop on Security and Privacy Analytics, IWSPA '24, pp. 69-70",
       "releaseDate": "2024",
       "url": "https://doi.org/10.1145/3643651.3659889",
       "summary": ""
@@ -203,8 +210,8 @@
   ],
   "interests": [
     {
-      "name": "Machine Learning",
-      "keywords": ["Reinforcement Learning", "Ethical AI", "Privacy-Preserving ML"]
+      "name": "AI Reasoning and Decision-Making",
+      "keywords": ["AI Reasoning", "Decision-Making", "Interpretability", "Empirical Evaluation"]
     }
   ]
 }
