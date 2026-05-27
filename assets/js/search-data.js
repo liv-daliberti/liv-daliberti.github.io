@@ -115,8 +115,8 @@ ninja.data = [{
           section: "News",},{id: "news-preprint-released-behavior-consistent-deep-reinforcement-learning",
           title: 'Preprint released: Behavior-Consistent Deep Reinforcement Learning.',
           description: "",
-          section: "News",},{id: "news-i-passed-my-princeton-c-s-generals-exam-i-wrote-a-short-post-and-shared-the-deck",
-          title: 'I passed my Princeton C.S. generals exam! I wrote a short post and...',
+          section: "News",},{id: "news-i-passed-my-princeton-c-s-generals-exam",
+          title: 'I passed my Princeton C.S. generals exam!',
           description: "",
           section: "News",},{
         id: 'social-bluesky',
