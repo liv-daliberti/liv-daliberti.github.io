@@ -58,7 +58,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-improved-analysis-cryptography-and-advanced-algorithm-design",
+            },{id: "post-i-passed-my-generals-exam",
+      
+        title: "I Passed My Generals Exam",
+      
+      description: "Learning Machine Behavior and the Princeton C.S. generals exam",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/generals-exam/";
+        
+      },
+    },{id: "post-improved-analysis-cryptography-and-advanced-algorithm-design",
       
         title: "Improved Analysis - Cryptography and Advanced Algorithm Design",
       
@@ -103,6 +114,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-preprint-released-behavior-consistent-deep-reinforcement-learning",
           title: 'Preprint released: Behavior-Consistent Deep Reinforcement Learning.',
+          description: "",
+          section: "News",},{id: "news-i-passed-my-princeton-c-s-generals-exam-i-wrote-a-short-post-and-shared-the-deck",
+          title: 'I passed my Princeton C.S. generals exam! I wrote a short post and...',
           description: "",
           section: "News",},{
         id: 'social-bluesky',
