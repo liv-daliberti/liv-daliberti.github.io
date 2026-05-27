@@ -58,7 +58,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-i-passed-my-generals-exam",
+            },{id: "post-liv-39-s-thoughts-on-teaching",
+      
+        title: "Liv&#39;s thoughts on teaching",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/livs-thoughts-on-teaching/";
+        
+      },
+    },{id: "post-i-passed-my-generals-exam",
       
         title: "I Passed My Generals Exam",
       
