@@ -11,54 +11,40 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "blog",
-          description: "",
+          description: "Personal essays and research updates from Liv G. d&#39;Aliberti on Ph.D. life, AI research, reinforcement learning, and learning in public.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
           },
         },{id: "nav-publications",
           title: "publications",
-          description: "publications in reversed chronological order.",
+          description: "Publications by Liv G. d&#39;Aliberti on reinforcement learning, AI reasoning, interpretable decision-making, privacy-preserving computation, and applied machine learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "nav-patents",
-          title: "patents",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/patents/";
-          },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "A record of courses that I&#39;ve taught over the years by semester.",
+          description: "Teaching record for Liv G. d&#39;Aliberti, including computer science, deep learning, and software engineering courses.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-i-passed-my-generals-exam",
+        },{id: "nav-patents",
+          title: "patents",
+          description: "Patent applications and applied research inventions by Liv G. d&#39;Aliberti.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/patents/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae for Liv G. d&#39;Aliberti, Computer Science Ph.D. student at Princeton University.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-i-passed-my-generals-exam",
       
         title: "I Passed My Generals Exam",
       
@@ -118,6 +104,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-passed-my-princeton-c-s-generals-exam",
           title: 'I passed my Princeton C.S. generals exam!',
           description: "",
+          section: "News",},{id: "news-workshop-paper-accepted-at-autorl-at-rlc-2026-behavior-consistent-deep-reinforcement-learning",
+          title: 'Workshop paper accepted at AutoRL at RLC 2026: Behavior-Consistent Deep Reinforcement Learning.',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
@@ -126,11 +115,25 @@ ninja.data = [{
           window.open("https://bsky.app/profile/liv-daliberti.bsky.social", "_blank");
         },
       },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/374/8954", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6C%69%76.%64%61%6C%69%62%65%72%74%69@%70%72%69%6E%63%65%74%6F%6E.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/liv-daliberti", "_blank");
         },
       },{
         id: 'social-linkedin',
@@ -147,11 +150,25 @@ ninja.data = [{
           window.open("https://orcid.org/0000-0002-3139-5960", "_blank");
         },
       },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Liv-Daliberti/", "_blank");
+        },
+      },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=wNgmnzQAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-work',
+        title: 'Work',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://citp.princeton.edu/people/liv-daliberti", "_blank");
         },
       },{
         id: 'social-x',
