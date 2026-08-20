@@ -2,9 +2,9 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: A record of courses that I've taught over the years by semester.
+description: Teaching record for Liv G. d'Aliberti, including computer science, deep learning, and software engineering courses.
 nav: true
-nav_order: 6
+nav_order: 3
 ---
 
 <div class="teaching-list">

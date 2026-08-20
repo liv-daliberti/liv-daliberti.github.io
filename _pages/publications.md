@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: publications in reversed chronological order.
+description: Publications by Liv G. d'Aliberti on reinforcement learning, AI reasoning, interpretable decision-making, privacy-preserving computation, and applied machine learning.
 nav: true
 nav_order: 2
 ---

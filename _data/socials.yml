@@ -5,12 +5,12 @@
 # acm_id: # your dl.acm.org/profile/id
 # blogger_url: # your blogger URL
 bluesky_url: https://bsky.app/profile/liv-daliberti.bsky.social # your bluesky URL
-# dblp_url: # your DBLP profile url
+dblp_url: https://dblp.org/pid/374/8954 # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
 email: liv.daliberti@princeton.edu # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
-# github_username: # your GitHub user name
+github_username: liv-daliberti # your GitHub user name
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # inspirehep_id: 1010907 # Inspire HEP author ID
@@ -28,7 +28,7 @@ orcid_id: 0000-0002-3139-5960 # your ORCID ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
-# research_gate_profile: # your profile on ResearchGate
+research_gate_profile: Liv-Daliberti # your profile on ResearchGate
 # rss_icon: true # set to true to show the RSS icon
 scholar_userid: wNgmnzQAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
@@ -41,7 +41,7 @@ scholar_userid: wNgmnzQAAAAJ # your Google Scholar ID
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
-# work_url: # work page URL
+work_url: https://citp.princeton.edu/people/liv-daliberti # work page URL
 x_username: livdaliberti # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username

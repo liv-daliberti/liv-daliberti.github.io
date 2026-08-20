@@ -7,3 +7,11 @@
 
 "Vision":
   color: "#009f36"
+
+"AutoRL":
+  url: https://sites.google.com/view/automatedrl/accepted-papers?authuser=0
+  color: "#4b7bec"
+
+"ACL Findings":
+  url: https://aclanthology.org/2026.findings-acl.47/
+  color: "#2f855a"

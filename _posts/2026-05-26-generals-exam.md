@@ -9,7 +9,7 @@ categories: life-posts
 
 Today, Tuesday, May 26th, 2026, I passed my Princeton C.S. generals exam.
 
-![]({{ "/assets/img/generals.png" | relative_url }}){:style="margin:auto; display:block; width:700px;"}
+{% include figure.liquid path="assets/img/generals.png" class="img-fluid rounded mx-auto d-block" max-width="700px" sizes="(min-width: 768px) 700px, 95vw" alt="Liv d'Aliberti after passing the Princeton C.S. generals exam" %}
 
 My talk was titled **Learning Machine Behavior: Measuring Exploration, Stability, and Alignment in Learned Agents**. Generals felt like a meaningful checkpoint: a chance to pull together the questions that have been motivating my Ph.D. work and explain how I think about learned agents as systems whose behavior we can measure, compare, and improve.
 

@@ -15,6 +15,18 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% assign page_description = page.description | default: site.description | strip | strip_newlines %}
+{% assign page_keywords = page.keywords | default: site.keywords %}
+{% assign social = site.data.socials %}
+{% assign og_image_path = page.og_image | default: site.og_image %}
+{% assign og_image_url = null %}
+{% if og_image_path %}
+  {% if og_image_path contains '://' %}
+    {% assign og_image_url = og_image_path %}
+  {% else %}
+    {% assign og_image_url = og_image_path | absolute_url %}
+  {% endif %}
+{% endif %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">
@@ -39,9 +51,9 @@
   {% endif %}
 </title>
 <meta name="author" content="{{ author_name }}">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-{% if page.keywords or site.keywords %}
-  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+<meta name="description" content="{{ page_description }}">
+{% if page_keywords %}
+  <meta name="keywords" content="{{ page_keywords }}">
 {% endif %}
 
 {% assign is_blog_post = false %}
@@ -57,22 +69,22 @@
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta property="og:description" content="{{ page_description }}">
+  {% if og_image_url %}
+    <meta property="og:image" content="{{ og_image_url }}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  {% if og_image_url %}
+    <meta name="twitter:image" content="{{ og_image_url }}">
   {% endif %}
-  {% if site.x_username %}
-    <meta name="twitter:site" content="@{{ site.x_username }}">
-    <meta name="twitter:creator" content="@{{ site.x_username }}">
+  {% if social.x_username %}
+    <meta name="twitter:site" content="@{{ social.x_username }}">
+    <meta name="twitter:creator" content="@{{ social.x_username }}">
   {% endif %}
 {% endif %}
 
@@ -80,16 +92,16 @@
   <!-- Schema.org -->
   {% comment %} Social links generator for "sameAs schema" {% endcomment %}
   {% assign sameaslinks = '' | split: ',' %}
-  {% if site.orcid_id %}
-    {% capture link %}https://orcid.org/{{ site.orcid_id }}{% endcapture %}
+  {% if social.orcid_id %}
+    {% capture link %}https://orcid.org/{{ social.orcid_id }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.scholar_userid %}
-    {% capture link %}https://scholar.google.com/citations?user={{ site.scholar_userid }}{% endcapture %}
+  {% if social.scholar_userid %}
+    {% capture link %}https://scholar.google.com/citations?user={{ social.scholar_userid }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.semanticscholar_id %}
-    {% capture link %}https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}{% endcapture %}
+  {% if social.semanticscholar_id %}
+    {% capture link %}https://www.semanticscholar.org/author/{{ social.semanticscholar_id }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.publons_id %}
@@ -104,28 +116,32 @@
     {% capture link %}https://osf.io/{{ site.osf_id }}/{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.research_gate_profile %}
-    {% capture link %}https://www.researchgate.net/profile/{{ site.research_gate_profile }}{% endcapture %}
+  {% if social.research_gate_profile %}
+    {% capture link %}https://www.researchgate.net/profile/{{ social.research_gate_profile }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.scopus_id %}
     {% capture link %}https://www.scopus.com/authid/detail.uri?authorId={{ site.scopus_id }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.github_username %}
-    {% capture link %}https://github.com/{{ site.github_username }}{% endcapture %}
+  {% if social.github_username %}
+    {% capture link %}https://github.com/{{ social.github_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.telegram_username %}
     {% capture link %}https://telegram.me/{{ site.telegram_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.linkedin_username %}
-    {% capture link %}https://www.linkedin.com/in/{{ site.linkedin_username }}{% endcapture %}
+  {% if social.linkedin_username %}
+    {% capture link %}https://www.linkedin.com/in/{{ social.linkedin_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.x_username %}
-    {% capture link %}https://twitter.com/{{ site.x_username }}{% endcapture %}
+  {% if social.x_username %}
+    {% capture link %}https://twitter.com/{{ social.x_username }}{% endcapture %}
+    {% assign sameaslinks = sameaslinks | push: link %}
+  {% endif %}
+  {% if social.bluesky_url %}
+    {% capture link %}{{ social.bluesky_url }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.mastodon_username %}
@@ -144,8 +160,8 @@
     {% capture link %}{{ site.blogger_url }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.work_url %}
-    {% capture link %}{{ site.work_url }}{% endcapture %}
+  {% if social.work_url %}
+    {% capture link %}{{ social.work_url }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.wikidata_id %}
@@ -168,8 +184,8 @@
     {% capture link %}https://gitlab.com/{{ site.gitlab_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.dblp_url %}
-    {% capture link %}{{ site.dblp_url }}{% endcapture %}
+  {% if social.dblp_url %}
+    {% capture link %}{{ social.dblp_url }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.stackoverflow_id %}
@@ -216,26 +232,35 @@
     {% capture link %}https://www.zotero.org/{{ site.zotero_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if sameaslinks != blank %}
-    {% assign sameaslinks = sameaslinks | split: '' %}
-  {% endif %}
-
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "{{ author_name }}"
+        "@context": "https://schema.org",
+        "@type": "{% if is_blog_post %}BlogPosting{% else %}ProfilePage{% endif %}",
+        "url": "{{ page.url | absolute_url }}",
+        "description": {{ page_description | jsonify }},
+        "headline": {{ page.title | default: title | jsonify }},
+        "author": {
+          "@type": "Person",
+          "name": {{ author_name | jsonify }},
+          "url": "{{ site.url }}{{ site.baseurl }}/"
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks }},
-        {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        "mainEntity": {
+          "@type": "Person",
+          "name": {{ author_name | jsonify }},
+          "url": "{{ site.url }}{{ site.baseurl }}/",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Princeton University",
+            "url": "https://www.princeton.edu/"
+          }{% if social.email or sameaslinks != blank %},{% endif %}
+          {% if social.email %}
+          "email": "mailto:{{ social.email }}"{% if sameaslinks != blank %},{% endif %}
+          {% endif %}
+          {% if sameaslinks != blank %}
+          "sameAs": {{ sameaslinks | jsonify }}
+          {% endif %}
+        },
+        "name": {{ title | jsonify }}
     }
   </script>
 {% endif %}

@@ -2,88 +2,154 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Liv G. d'Aliberti
+    - name: Role
+      value: Computer Science Ph.D. Student, Princeton University
+    - name: Research Areas
+      value: Reinforcement learning, machine behavior, reliable AI reasoning, interpretable decision-making systems
+    - name: Links
+      links:
+        - name: Google Scholar
+          link: https://scholar.google.com/citations?user=wNgmnzQAAAAJ
+        - name: ORCID
+          link: https://orcid.org/0000-0002-3139-5960
+        - name: DBLP
+          link: https://dblp.org/pid/374/8954
+        - name: Princeton CITP
+          link: https://citp.princeton.edu/people/liv-daliberti
+        - name: GitHub
+          link: https://github.com/liv-daliberti
+        - name: LinkedIn
+          link: https://www.linkedin.com/in/liv-d-aliberti-89b546130/
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Computer Science
+      institution: Princeton University
+      year: 2024-present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Advised by Manoel Horta Ribeiro.
+        - Affiliated with the Humans and Machines Lab and Princeton CITP.
+    - title: M.S. in Applied Mathematics and Statistics
+      institution: Georgetown University
+      year: 2019
+    - title: B.A. / B.S. in History (Honors) and Mathematics
+      institution: Georgetown University
+      year: 2017
       description:
-        - Description 1.
-        - Description 2.
+        - Minor in Economics.
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Ph.D. Student
+      institution: Humans and Machines Lab and Center for Information Technology Policy, Princeton University
+      year: 2024-present
+      linkitems:
+        - linkname: Lab
+          link: https://hamlab.princeton.edu/
+        - linkname: CITP
+          link: https://citp.princeton.edu/people/liv-daliberti
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Researching reliable, interpretable, and empirically grounded AI reasoning and decision-making.
+        - Current work focuses on learned-agent behavior, reinforcement learning stability, and behavioral consistency.
+    - title: Senior AI/ML Researcher
+      institution: Leidos Inc.
+      year: 2019-2024
+      linkitems:
+        - linkname: Leidos AI
+          link: https://www.leidos.com/ai
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Led and contributed to AI/ML research programs across reinforcement learning, autonomy, privacy-enhancing technologies, and explainable decision-making.
+        - Helped transition internal research into customer-funded projects.
+        - Supported intern program development and research team growth.
+    - title: Data Analyst
+      institution: Model B
+      year: 2018-2019
       description:
+        - Developed analytics workflows for campaign-based marketing data.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Selected Publications
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Behavior-Consistent Deep Reinforcement Learning
+      institution: Workshop on Automated Reinforcement Learning at RLC
+      year: 2026
+      linkitems:
+        - linkname: arXiv
+          link: https://arxiv.org/abs/2605.21214
+    - title: The Illusion of Insight in Reasoning Models
+      institution: "Findings of the Association for Computational Linguistics: ACL 2026"
+      year: 2026
+      linkitems:
+        - linkname: ACL Anthology
+          link: https://aclanthology.org/2026.findings-acl.47/
+        - linkname: DOI
+          link: https://doi.org/10.18653/v1/2026.findings-acl.47
+        - linkname: arXiv
+          link: https://arxiv.org/abs/2601.00514
+        - linkname: Code
+          link: https://github.com/liv-daliberti/Illusion-of-Reasoning
+    - title: Grounded-Retrieval Adversarial Imitation Loop
+      institution: NeurIPS 2025 Workshop on Bridging Language, Agent, and World Models for Reasoning and Planning
+      year: 2025
+      linkitems:
+        - linkname: OpenReview
+          link: https://openreview.net/forum?id=MdmszyLpVu
+    - title: Explainability for Unmanned Aerial Vehicle Control via Multi-Objective Reinforcement Learning
+      institution: 2025 IEEE Aerospace Conference
+      year: 2025
+      linkitems:
+        - linkname: IEEE
+          link: https://ieeexplore.ieee.org/document/11068676
+    - title: Preserving Patient Privacy during Computation over Shared Electronic Health Record Data
+      institution: Journal of Medical Systems
+      year: 2022
+      linkitems:
+        - linkname: DOI
+          link: https://doi.org/10.1007/s10916-022-01865-5
+
+- title: Teaching
+  type: time_table
+  contents:
+    - title: Deep Learning Developments with PyTorch
+      institution: Johns Hopkins Engineering for Professionals
+      year: 2025
+      linkitems:
+        - linkname: Course
+          link: https://ep.jhu.edu/courses/705643-deep-learning-developments-with-pytorch/
+      description:
+        - Taught in Spring, Summer, and Fall 2025.
+    - title: Modern Software Concepts
+      institution: Johns Hopkins Engineering for Professionals
+      year: 2024-2025
+      linkitems:
+        - linkname: Course
+          link: https://ep.jhu.edu/courses/605256-modern-software-concepts-in-python/
+    - title: Introduction to Programming
+      institution: Johns Hopkins Engineering for Professionals
+      year: 2023-2024
+      linkitems:
+        - linkname: Course
+          link: https://ep.jhu.edu/courses/605206-introduction-to-programming-using-python/
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - year: 2024
+      title: Leidos CTO Office Purple Dollar Award
+      maindescription: Recognized for successful transition of internal research to customer-funded projects.
+    - year: 2021
+      title: Leadership, Excellence in Integrity - Rising Star
+      institution: Leidos Annual Achievement Award
+      maindescription: Recognized for leadership potential.
 
-- title: Patents & Invention Disclosures
+- title: Patents and Invention Disclosures
   type: time_table
   contents:
     - year: 2026
-      title: <a href="https://patents.justia.com/patent/20260087305">HOLOGRAPHIC GRAPH TRANSFORMER NETWORK (HGTN) SYSTEM AND METHOD</a>
+      title: <a href="https://patents.justia.com/patent/20260087305">Holographic Graph Transformer Network (HGTN) System and Method</a>
       maindescription: U.S. Patent Application No. 20260087305.
       items:
         - Inventors: Joshua P. Wilson, Jackson D. Scott, Christian A. Clark, Bryce E. King, Olivia Galliker d'Aliberti.
@@ -102,16 +168,15 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Reliable Learned Agents
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Measuring and improving behavioral consistency across reinforcement learning runs.
+        - Understanding when learned systems change behavior in ways that matter.
+    - title: AI Reasoning and Decision-Making
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Empirical evaluation of reasoning models.
+        - Interpretable, auditable, and reliable decision-making systems.
+    - title: Privacy and Applied ML
+      items:
+        - Privacy-enhancing technologies.
+        - Secure and explainable AI systems for high-stakes settings.

@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: Personal essays and research updates from Liv G. d'Aliberti on Ph.D. life, AI research, reinforcement learning, and learning in public.
 nav: true
 nav_order: 1
 pagination:

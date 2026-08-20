@@ -2,8 +2,9 @@
 layout: page
 title: patents
 permalink: /patents/
+description: Patent applications and applied research inventions by Liv G. d'Aliberti.
 nav: true
-nav_order: 6
+nav_order: 4
 ---
 
 **System and Process for Securing Client Data During Federated Learning**  
