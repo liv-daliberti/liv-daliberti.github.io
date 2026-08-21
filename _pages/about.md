@@ -20,7 +20,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a Computer Science Ph.D. student at Princeton University, advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://hamlab.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti). I study how learned agents reason, decide, and change behavior, and how to make AI systems more reliable, interpretable, and empirically grounded at scale.
+I am a Computer Science Ph.D. student at Princeton University, advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://hamlab.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti). I study how learned agents reason, decide, and change behavior, focusing on reliability, interpretability, and empirically grounded evaluation at scale.
 
 <ul class="research-snapshot" aria-label="Research focus">
   <li>
