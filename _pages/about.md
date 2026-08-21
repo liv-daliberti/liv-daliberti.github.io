@@ -41,6 +41,4 @@ Prior to starting my Ph.D., I worked as a research scientist at [Leidos](https:/
 
 I also teach as a Lecturer in Computer Science at [Johns Hopkins Engineering for Professionals](https://ep.jhu.edu/faculty/liv-daliberti/), where I teach courses in [modern Python software development](https://ep.jhu.edu/courses/605256-modern-software-concepts-in-python/) and [deep learning with PyTorch](https://ep.jhu.edu/courses/705643-deep-learning-developments-with-pytorch/).
 
-I like research that has both teeth and consequences: algorithms that can be measured, audited, debugged, and eventually trusted outside a benchmark table. I enjoy working with people who care about the details and still remember that the point is to build systems that help humans.
-
 I really like all cats and one dog, my wife's cavapoo. When I'm offline, I'm usually hiking, backpacking, skiing, or exploring new places.
