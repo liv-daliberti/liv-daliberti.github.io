@@ -22,20 +22,20 @@ social: true # includes social icons at the bottom of the page
 
 I am a Computer Science Ph.D. student at Princeton University, advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://hamlab.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti). I study how learned agents reason, decide, and change behavior, with an eye toward making AI systems more reliable, interpretable, and empirically grounded at scale.
 
-<div class="research-snapshot" aria-label="Research focus">
-  <div>
+<ul class="research-snapshot" aria-label="Research focus">
+  <li>
     <span class="snapshot-label">research</span>
-    <strong>reinforcement learning, machine behavior, reliable reasoning</strong>
-  </div>
-  <div>
+    <strong>Reinforcement learning, machine behavior, reliable reasoning</strong>
+  </li>
+  <li>
     <span class="snapshot-label">current thread</span>
-    <strong>measuring and improving consistency in learned agents</strong>
-  </div>
-  <div>
+    <strong>Measuring and improving consistency in learned agents</strong>
+  </li>
+  <li>
     <span class="snapshot-label">previous life</span>
     <strong>AI/ML research for government R&D, privacy, autonomy, and explainability</strong>
-  </div>
-</div>
+  </li>
+</ul>
 
 I also teach as a Lecturer in Computer Science at [Johns Hopkins Engineering for Professionals](https://ep.jhu.edu/faculty/liv-daliberti/), where I teach courses in modern Python software development and deep learning with PyTorch.
 
