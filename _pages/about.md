@@ -25,15 +25,27 @@ I am a Computer Science Ph.D. student at Princeton University, advised by [Manoe
 <ul class="research-snapshot" aria-label="Research focus">
   <li>
     <span class="snapshot-label">research</span>
-    <strong>Reinforcement learning, machine behavior, reliable reasoning</strong>
+    <ul>
+      <li>Reinforcement learning</li>
+      <li>Machine learning</li>
+      <li>Reliable reasoning</li>
+    </ul>
   </li>
   <li>
-    <span class="snapshot-label">current thread</span>
-    <strong>Measuring and improving consistency in learned agents</strong>
+    <span class="snapshot-label">current threads</span>
+    <ul>
+      <li>Diverse reasoning</li>
+      <li>Judgemental forecasting</li>
+      <li>Agentic misalignment</li>
+    </ul>
   </li>
   <li>
     <span class="snapshot-label">previous life</span>
-    <strong>AI/ML research for government R&D, privacy, autonomy, and explainability</strong>
+    <ul>
+      <li>Government R&D</li>
+      <li>Privacy</li>
+      <li>Autonomy</li>
+    </ul>
   </li>
 </ul>
 

@@ -237,10 +237,11 @@ ul.task-list input[type="checkbox"] {
   padding: 0;
   list-style: none;
 
-  li {
+  > li {
     position: relative;
     display: grid;
-    gap: 0.2rem;
+    align-content: start;
+    gap: 0.55rem;
     min-height: 100%;
     padding: 0.9rem 1rem 0.9rem 2.2rem;
     border: 1px solid rgba(47, 111, 115, 0.18);
@@ -249,7 +250,7 @@ ul.task-list input[type="checkbox"] {
     background: var(--snapshot-bg);
   }
 
-  li::before {
+  > li::before {
     content: "";
     position: absolute;
     top: 1.25rem;
@@ -260,19 +261,25 @@ ul.task-list input[type="checkbox"] {
     background: var(--snapshot-accent);
   }
 
-  li:nth-child(2) {
+  > li:nth-child(2) {
     --snapshot-accent: #7a4f9a;
     --snapshot-bg: rgba(122, 79, 154, 0.1);
     border-color: rgba(122, 79, 154, 0.18);
   }
 
-  li:nth-child(3) {
+  > li:nth-child(3) {
     --snapshot-accent: #a35d2a;
     --snapshot-bg: rgba(163, 93, 42, 0.11);
     border-color: rgba(163, 93, 42, 0.2);
   }
 
-  strong {
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  ul li {
+    margin: 0.15rem 0;
     font-weight: 500;
     line-height: 1.35;
   }
