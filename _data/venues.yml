@@ -15,3 +15,11 @@
 "ACL Findings":
   url: https://aclanthology.org/2026.findings-acl.47/
   color: "#2f855a"
+
+"IEEE Aerospace":
+  url: https://ieeexplore.ieee.org/document/11068676
+  color: "#00629b"
+
+"LAWS":
+  url: https://openreview.net/forum?id=MdmszyLpVu
+  color: "#8a5cf6"
