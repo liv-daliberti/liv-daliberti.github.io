@@ -37,9 +37,9 @@ I am a Computer Science Ph.D. student at Princeton University, advised by [Manoe
   </li>
 </ul>
 
-I also teach as a Lecturer in Computer Science at [Johns Hopkins Engineering for Professionals](https://ep.jhu.edu/faculty/liv-daliberti/), where I teach courses in modern Python software development and deep learning with PyTorch.
-
 Prior to starting my Ph.D., I worked as a research scientist at [Leidos](https://www.leidos.com/) in their CTO Office Artificial Intelligence & Machine Learning Accelerator. I earned my Master of Science in [Applied Mathematics and Statistics](https://mathstat.georgetown.edu/profiles/liv-daliberti-ms-2020/) in 2019.
+
+I also teach as a Lecturer in Computer Science at [Johns Hopkins Engineering for Professionals](https://ep.jhu.edu/faculty/liv-daliberti/), where I teach courses in [modern Python software development](https://ep.jhu.edu/courses/605256-modern-software-concepts-in-python/) and [deep learning with PyTorch](https://ep.jhu.edu/courses/705643-deep-learning-developments-with-pytorch/).
 
 I like research that has both teeth and consequences: algorithms that can be measured, audited, debugged, and eventually trusted outside a benchmark table. I enjoy working with people who care about the details and still remember that the point is to build systems that help humans.
 
