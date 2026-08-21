@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I passed my Princeton C.S. <a href="{{ '/blog/2026/generals-exam/' | relative_url }}">generals exam</a>!
+I passed my Princeton C.S. <a href="https://liv-daliberti.github.io/blog/2026/generals-exam/">generals exam</a>!

@@ -17,6 +17,8 @@
           link: https://dblp.org/pid/374/8954
         - name: Princeton CITP
           link: https://citp.princeton.edu/people/liv-daliberti
+        - name: Johns Hopkins EP
+          link: https://ep.jhu.edu/faculty/liv-daliberti/
         - name: GitHub
           link: https://github.com/liv-daliberti
         - name: LinkedIn
@@ -115,24 +117,63 @@
   contents:
     - title: Deep Learning Developments with PyTorch
       institution: Johns Hopkins Engineering for Professionals
-      year: 2025
+      year: 2025-2026
       linkitems:
         - linkname: Course
           link: https://ep.jhu.edu/courses/705643-deep-learning-developments-with-pytorch/
       description:
-        - Taught in Spring, Summer, and Fall 2025.
-    - title: Modern Software Concepts
+        - Instructor for Spring, Summer, and Fall 2025; Spring, Summer, and Fall 2026.
+    - title: Modern Software Concepts in Python
       institution: Johns Hopkins Engineering for Professionals
-      year: 2024-2025
+      year: 2024-2026
       linkitems:
         - linkname: Course
           link: https://ep.jhu.edu/courses/605256-modern-software-concepts-in-python/
+      description:
+        - Instructor for Summer and Fall 2024; Summer and Fall 2025; Spring, Summer, and Fall 2026.
     - title: Introduction to Programming
       institution: Johns Hopkins Engineering for Professionals
       year: 2023-2024
       linkitems:
         - linkname: Course
           link: https://ep.jhu.edu/courses/605206-introduction-to-programming-using-python/
+      description:
+        - Instructor for Spring, Summer, and Fall 2023; Summer and Fall 2024.
+    - title: Computer Vision (COS 429)
+      institution: Princeton University
+      year: Fall 2026
+      description:
+        - Teaching Assistant with Prof. Olga Russakovsky.
+    - title: Teaching Assistant
+      institution: Georgetown University
+      description:
+        - Teaching assistant in the Department of Mathematics and Statistics.
+
+- title: Selected Talks
+  type: time_table
+  contents:
+    - title: "Learning Machine Behavior: Measuring Exploration, Stability, and Alignment in Learned Agents"
+      institution: Princeton Computer Science General Exam
+      year: 2026
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/generals-exam.pdf
+
+- title: Profiles and Features
+  type: time_table
+  contents:
+    - title: Lecturer Profile
+      institution: Johns Hopkins Engineering for Professionals
+      year: 2026
+      linkitems:
+        - linkname: Faculty Profile
+          link: https://ep.jhu.edu/faculty/liv-daliberti/
+    - title: M.S. Alumni Profile
+      institution: Georgetown University Department of Mathematics and Statistics
+      year: 2026
+      linkitems:
+        - linkname: Profile
+          link: https://mathstat.georgetown.edu/profiles/liv-daliberti-ms-2020/
 
 - title: Honors and Awards
   type: time_table

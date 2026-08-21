@@ -15,4 +15,4 @@ My talk was titled **Learning Machine Behavior: Measuring Exploration, Stability
 
 I am grateful to my committee, labmates, friends, and family for the feedback, questions, encouragement, and patience that helped me get to this point.
 
-You can read the slides here: [Generals Exam deck]({{ "/assets/pdf/generals-exam.pdf" | relative_url }}).
+You can read the slides here: [Generals Exam deck](https://liv-daliberti.github.io/assets/pdf/generals-exam.pdf).
