@@ -193,6 +193,8 @@ I teach as a Lecturer in Computer Science at [Johns Hopkins Engineering for Prof
         <div class="text-muted mb-2">Teaching Assistantship</div>
         <ul class="list-unstyled mb-0">
           <li>Department of Mathematics and Statistics</li>
+          <li>Data Mining, one semester</li>
+          <li>Computational Mathematics, two semesters</li>
         </ul>
       </div>
       <div class="text-md-right mt-3 mt-md-0">
