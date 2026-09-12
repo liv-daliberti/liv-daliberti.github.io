@@ -2,8 +2,8 @@
 layout: about
 title: about
 permalink: /
-description: Liv G. d'Aliberti is a Princeton Computer Science Ph.D. student researching reliable AI reasoning, reinforcement learning, and interpretable decision-making systems.
-keywords: Liv d'Aliberti, Princeton Computer Science, reinforcement learning, machine behavior, reliable AI, interpretable AI
+description: Liv G. d'Aliberti, also known as Liv d'Aliberti, is a Princeton Computer Science Ph.D. student researching reliable AI reasoning, reinforcement learning, and interpretable decision-making systems.
+keywords: Liv d'Aliberti, Liv G. d'Aliberti, Liv Galliker d'Aliberti, Liv Daliberti, Liv G Daliberti, Princeton Computer Science, reinforcement learning, machine behavior, reliable AI, interpretable AI
 subtitle: <a href='https://www.cs.princeton.edu/'>Computer Science</a> Ph.D. Student at <a href='https://www.princeton.edu/'>Princeton University</a>.
 
 profile:

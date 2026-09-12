@@ -15,6 +15,26 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% assign author_name = author_name | strip %}
+{% if site.title == 'blank' %}
+  {% assign site_title = author_name %}
+{% else %}
+  {% assign site_title = site.title %}
+{% endif %}
+{% capture page_meta_title %}
+  {% if page.url == '/blog/index.html' %}
+    {{ page.title }} | {{ site_title }}
+  {% elsif page.title != 'blank' and page.url != '/' %}
+    {% if page.title == null or page.title == '' %}
+      {{ page.date | date: '%Y' }} | {{ site_title }}
+    {% else %}
+      {{ page.title }} | {{ site_title }}
+    {% endif %}
+  {% else %}
+    {{ site_title }}
+  {% endif %}
+{% endcapture %}
+{% assign page_meta_title = page_meta_title | strip %}
 {% assign page_description = page.description | default: site.description | strip | strip_newlines %}
 {% assign page_keywords = page.keywords | default: site.keywords %}
 {% assign social = site.data.socials %}
@@ -32,24 +52,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>
-  {% if site.title == 'blank' %}
-    {% capture title %}{{ author_name }}{% endcapture %}
-  {% else %}
-    {% capture title %}{{ site.title }}{% endcapture %}
-  {% endif %}
-  {% if page.url == '/blog/index.html' %}
-    {{ page.title }} | {{ title }}
-  {% elsif page.title != 'blank' and page.url != '/' %}
-    {% if page.title == null or page.title == '' %}
-      {{ page.date | date: '%Y' }} | {{ title }}
-    {% else %}
-      {{ page.title }} | {{ title }}
-    {% endif %}
-  {% else %}
-    {{ title }}
-  {% endif %}
-</title>
+<title>{{ page_meta_title }}</title>
 <meta name="author" content="{{ author_name }}">
 <meta name="description" content="{{ page_description }}">
 {% if page_keywords %}
@@ -65,9 +68,9 @@
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
-  <meta property="og:site_name" content="{{ title }}">
+  <meta property="og:site_name" content="{{ site_title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta property="og:title" content="{{ page_meta_title }}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{{ page_description }}">
   {% if og_image_url %}
@@ -77,7 +80,7 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:title" content="{{ page_meta_title }}">
   <meta name="twitter:description" content="{{ page_description }}">
   {% if og_image_url %}
     <meta name="twitter:image" content="{{ og_image_url }}">
@@ -232,13 +235,19 @@
     {% capture link %}https://www.zotero.org/{{ site.zotero_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
+  {% if site.seo.same_as %}
+    {% for link in site.seo.same_as %}
+      {% assign sameaslinks = sameaslinks | push: link %}
+    {% endfor %}
+  {% endif %}
+  {% assign primary_affiliation = site.seo.works_for | first %}
   <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}ProfilePage{% endif %}",
         "url": "{{ page.url | absolute_url }}",
         "description": {{ page_description | jsonify }},
-        "headline": {{ page.title | default: title | jsonify }},
+        "headline": {{ page_meta_title | jsonify }},
         "author": {
           "@type": "Person",
           "name": {{ author_name | jsonify }},
@@ -248,19 +257,59 @@
           "@type": "Person",
           "name": {{ author_name | jsonify }},
           "url": "{{ site.url }}{{ site.baseurl }}/",
+          "mainEntityOfPage": "{{ page.url | absolute_url }}"
+          {% if og_image_url %},
+          "image": "{{ og_image_url }}"
+          {% endif %}
+          {% if site.seo.alternate_names %},
+          "alternateName": {{ site.seo.alternate_names | jsonify }}
+          {% endif %}
+          {% if site.seo.job_title %},
+          "jobTitle": {{ site.seo.job_title | jsonify }}
+          {% endif %}
+          {% if site.seo.works_for %},
+          "worksFor": [
+            {% for organization in site.seo.works_for %}
+              {
+                "@type": "Organization",
+                "name": {{ organization.name | jsonify }},
+                "url": {{ organization.url | jsonify }}
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ],
           "affiliation": {
             "@type": "CollegeOrUniversity",
-            "name": "Princeton University",
-            "url": "https://www.princeton.edu/"
-          }{% if social.email or sameaslinks != blank %},{% endif %}
+            "name": {{ primary_affiliation.name | jsonify }},
+            "url": {{ primary_affiliation.url | jsonify }}
+          }
+          {% endif %}
+          {% if site.seo.alumni_of %},
+          "alumniOf": [
+            {% for organization in site.seo.alumni_of %}
+              {
+                "@type": "CollegeOrUniversity",
+                "name": {{ organization.name | jsonify }},
+                "url": {{ organization.url | jsonify }}
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ]
+          {% endif %}
+          {% if site.seo.knows_about %},
+          "knowsAbout": {{ site.seo.knows_about | jsonify }}
+          {% endif %}
+          {% if social.orcid_id %},
+          "identifier": "https://orcid.org/{{ social.orcid_id }}"
+          {% endif %}
           {% if social.email %}
-          "email": "mailto:{{ social.email }}"{% if sameaslinks != blank %},{% endif %}
+          ,
+          "email": "mailto:{{ social.email }}"
           {% endif %}
           {% if sameaslinks != blank %}
+          ,
           "sameAs": {{ sameaslinks | jsonify }}
           {% endif %}
         },
-        "name": {{ title | jsonify }}
+        "name": {{ page_meta_title | jsonify }}
     }
   </script>
 {% endif %}

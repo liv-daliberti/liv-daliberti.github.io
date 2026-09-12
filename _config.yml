@@ -9,9 +9,9 @@ last_name: d'Aliberti
 contact_note: >
   I'm most reachable at my Princeton University email address, liv.daliberti@princeton.edu.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Liv G. d'Aliberti is a Computer Science Ph.D. student at Princeton University working on reliable AI reasoning, reinforcement learning, machine behavior, and interpretable decision-making systems.
+  Liv G. d'Aliberti, also known as Liv d'Aliberti, is a Computer Science Ph.D. student at Princeton University working on reliable AI reasoning, reinforcement learning, machine behavior, and interpretable decision-making systems.
 footer_text: >
-keywords: Liv d'Aliberti, Liv G. d'Aliberti, Princeton Computer Science, reinforcement learning, machine behavior, AI reasoning, reliable AI, interpretable AI, decision-making systems # add your own keywords or leave empty
+keywords: Liv d'Aliberti, Liv G. d'Aliberti, Liv Galliker d'Aliberti, Liv Daliberti, Liv G Daliberti, Princeton Computer Science, reinforcement learning, machine behavior, AI reasoning, reliable AI, interpretable AI, decision-making systems # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -64,6 +64,32 @@ max_width: 930px
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
 og_image: /assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
+
+seo:
+  alternate_names:
+    - Liv d'Aliberti
+    - Liv G. d'Aliberti
+    - Liv Galliker d'Aliberti
+    - Liv Daliberti
+    - Liv G Daliberti
+  job_title: Computer Science Ph.D. Student
+  works_for:
+    - name: Princeton University
+      url: https://www.princeton.edu/
+    - name: Johns Hopkins Engineering for Professionals
+      url: https://ep.jhu.edu/
+  alumni_of:
+    - name: Georgetown University
+      url: https://www.georgetown.edu/
+  knows_about:
+    - Reinforcement learning
+    - Machine learning
+    - AI reasoning
+    - Machine behavior
+    - Reliable AI
+    - Interpretable decision-making systems
+  same_as:
+    - https://ep.jhu.edu/faculty/liv-daliberti/
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
