@@ -55,6 +55,7 @@
 <title>{{ page_meta_title }}</title>
 <meta name="author" content="{{ author_name }}">
 <meta name="description" content="{{ page_description }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
 {% if page_keywords %}
   <meta name="keywords" content="{{ page_keywords }}">
 {% endif %}
@@ -250,12 +251,16 @@
         "headline": {{ page_meta_title | jsonify }},
         "author": {
           "@type": "Person",
+          "@id": "{{ site.url }}{{ site.baseurl }}/#person",
           "name": {{ author_name | jsonify }},
           "url": "{{ site.url }}{{ site.baseurl }}/"
         },
         "mainEntity": {
           "@type": "Person",
+          "@id": "{{ site.url }}{{ site.baseurl }}/#person",
           "name": {{ author_name | jsonify }},
+          "givenName": "{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %}",
+          "familyName": "{{ site.last_name }}",
           "url": "{{ site.url }}{{ site.baseurl }}/",
           "mainEntityOfPage": "{{ page.url | absolute_url }}"
           {% if og_image_url %},
@@ -296,6 +301,23 @@
           {% endif %}
           {% if site.seo.knows_about %},
           "knowsAbout": {{ site.seo.knows_about | jsonify }}
+          {% endif %}
+          {% if site.seo.featured_publications %},
+          "subjectOf": [
+            {% for publication in site.seo.featured_publications %}
+              {
+                "@type": "ScholarlyArticle",
+                "headline": {{ publication.title | jsonify }},
+                "name": {{ publication.title | jsonify }},
+                "url": {{ publication.url | jsonify }},
+                "datePublished": {{ publication.date_published | jsonify }},
+                "isPartOf": {
+                  "@type": "CreativeWork",
+                  "name": {{ publication.venue | jsonify }}
+                }
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ]
           {% endif %}
           {% if social.orcid_id %},
           "identifier": "https://orcid.org/{{ social.orcid_id }}"

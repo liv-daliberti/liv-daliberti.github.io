@@ -12,6 +12,10 @@
   url: https://sites.google.com/view/automatedrl/accepted-papers?authuser=0
   color: "#4b7bec"
 
+"MATH-AI":
+  url: https://mathai-2026.github.io/
+  color: "#b83280"
+
 "ACL Findings":
   url: https://aclanthology.org/2026.findings-acl.47/
   color: "#2f855a"

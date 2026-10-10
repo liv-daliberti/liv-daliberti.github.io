@@ -75,6 +75,14 @@
 - title: Selected Publications
   type: time_table
   contents:
+    - title: Measuring and Mitigating Solution Mode Collapse in RLVR
+      institution: The 6th Workshop on Mathematical Reasoning and AI at NeurIPS 2026
+      year: 2026
+      linkitems:
+        - linkname: arXiv
+          link: https://arxiv.org/abs/2610.11064
+        - linkname: Workshop
+          link: https://mathai-2026.github.io/
     - title: Behavior-Consistent Deep Reinforcement Learning
       institution: Workshop on Automated Reinforcement Learning at RLC
       year: 2026

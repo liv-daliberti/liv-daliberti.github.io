@@ -9,9 +9,9 @@ last_name: d'Aliberti
 contact_note: >
   I'm most reachable at my Princeton University email address, liv.daliberti@princeton.edu.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Liv G. d'Aliberti, also known as Liv d'Aliberti, is a Computer Science Ph.D. student at Princeton University working on reliable AI reasoning, reinforcement learning, machine behavior, and interpretable decision-making systems.
+  Liv G. d'Aliberti, also known as Liv d'Aliberti, is a Computer Science Ph.D. student at Princeton University working on reliable AI reasoning, reinforcement learning, RLVR solution diversity, machine behavior, and interpretable decision-making systems.
 footer_text: >
-keywords: Liv d'Aliberti, Liv G. d'Aliberti, Liv Galliker d'Aliberti, Liv Daliberti, Liv G Daliberti, Princeton Computer Science, reinforcement learning, machine behavior, AI reasoning, reliable AI, interpretable AI, decision-making systems # add your own keywords or leave empty
+keywords: Liv d'Aliberti, Liv G. d'Aliberti, Liv Galliker d'Aliberti, Liv Daliberti, Liv G Daliberti, Liv D'Aliberti, Princeton Computer Science, RLVR, solution mode collapse, ModeBench, Re:Max, reinforcement learning, machine behavior, AI reasoning, reliable AI, interpretable AI, decision-making systems # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -70,8 +70,11 @@ seo:
     - Liv d'Aliberti
     - Liv G. d'Aliberti
     - Liv Galliker d'Aliberti
+    - Liv D'Aliberti
+    - Liv G D'Aliberti
     - Liv Daliberti
     - Liv G Daliberti
+    - Liv Galliker Daliberti
   job_title: Computer Science Ph.D. Student
   works_for:
     - name: Princeton University
@@ -82,12 +85,29 @@ seo:
     - name: Georgetown University
       url: https://www.georgetown.edu/
   knows_about:
+    - RLVR
+    - Solution mode collapse
+    - ModeBench
+    - Re:Max
     - Reinforcement learning
     - Machine learning
     - AI reasoning
     - Machine behavior
     - Reliable AI
     - Interpretable decision-making systems
+  featured_publications:
+    - title: Measuring and Mitigating Solution Mode Collapse in RLVR
+      url: https://arxiv.org/abs/2610.11064
+      date_published: "2026-10-08"
+      venue: The 6th Workshop on Mathematical Reasoning and AI at NeurIPS 2026
+    - title: The Illusion of Insight in Reasoning Models
+      url: https://aclanthology.org/2026.findings-acl.47/
+      date_published: "2026-07-01"
+      venue: "Findings of the Association for Computational Linguistics: ACL 2026"
+    - title: Behavior-Consistent Deep Reinforcement Learning
+      url: https://arxiv.org/abs/2605.21214
+      date_published: "2026-05-20"
+      venue: Workshop on Automated Reinforcement Learning at RLC
   same_as:
     - https://ep.jhu.edu/faculty/liv-daliberti/
 
@@ -103,7 +123,7 @@ pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
+google_site_verification: VdKJXAfWRCoDoMrUZNOsHCOokcgQFbcXTmTW_bxK5EQ # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
@@ -414,7 +434,7 @@ enable_google_analytics: false # enables google analytics
 enable_cronitor_analytics: false # enables cronitor RUM analytics
 enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
-enable_google_verification: false # enables google site verification
+enable_google_verification: true # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_masonry: false # enables automatic project cards arrangement
 enable_math: false # enables math typesetting (uses MathJax)
