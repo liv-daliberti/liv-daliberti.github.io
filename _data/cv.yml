@@ -202,19 +202,9 @@
     - year: 2026
       title: <a href="https://patents.justia.com/patent/20260087305">Holographic Graph Transformer Network (HGTN) System and Method</a>
       maindescription: U.S. Patent Application No. 20260087305.
-      items:
-        - Inventors: Joshua P. Wilson, Jackson D. Scott, Christian A. Clark, Bryce E. King, Olivia Galliker d'Aliberti.
-        - Applicant: Leidos, Inc.
-        - Filed: September 24, 2025.
-        - Published: March 26, 2026.
     - year: 2024
       title: <a href="https://patents.justia.com/patent/20240413969">System and Process for Securing Client Data During Federated Learning</a>
       maindescription: U.S. Patent Application No. 20240413969.
-      items:
-        - Inventors: Olivia Galliker d'Aliberti, Evan Michael Gronberg.
-        - Applicant: Leidos Inc.
-        - Filed: June 12, 2024.
-        - Published: December 12, 2024.
 
 - title: Academic Interests
   type: nested_list
