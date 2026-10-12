@@ -201,10 +201,8 @@
   contents:
     - year: 2026
       title: <a href="https://patents.justia.com/patent/20260087305">Holographic Graph Transformer Network (HGTN) System and Method</a>
-      maindescription: U.S. Patent Application No. 20260087305.
     - year: 2024
       title: <a href="https://patents.justia.com/patent/20240413969">System and Process for Securing Client Data During Federated Learning</a>
-      maindescription: U.S. Patent Application No. 20240413969.
 
 - title: Academic Interests
   type: nested_list
