@@ -22,6 +22,8 @@ social: true # includes social icons at the bottom of the page
 
 Advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://hamlab.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti), I study how learned agents reason, decide, and change behavior, focusing on reliability, interpretability, and empirically grounded evaluation at scale.
 
+[CV (PDF)]({{ '/assets/pdf/cv.pdf' | relative_url }})
+
 <ul class="research-snapshot" aria-label="Research focus">
   <li>
     <span class="snapshot-label">research</span>
