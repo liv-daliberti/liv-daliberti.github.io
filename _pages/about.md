@@ -23,7 +23,7 @@ social: true # includes social icons at the bottom of the page
 
 I'm Liv d'Aliberti, a Computer Science Ph.D. student at Princeton University. I publish as Liv G. d'Aliberti.
 
-Advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://hamlab.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti), I study how learned agents reason, decide, and change behavior, focusing on reliability, interpretability, and empirically grounded evaluation at scale.
+Advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://humans.cs.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti), I study how learned agents reason, decide, and change behavior, focusing on reliability, interpretability, and empirically grounded evaluation at scale.
 
 [CV (PDF)]({{ '/assets/pdf/cv.pdf' | relative_url }})
 
