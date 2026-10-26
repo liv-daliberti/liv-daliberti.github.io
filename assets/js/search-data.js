@@ -107,6 +107,9 @@ ninja.data = [{
           section: "News",},{id: "news-preprint-released-measuring-and-mitigating-solution-mode-collapse-in-rlvr-accepted-to-math-ai-at-neurips-2026",
           title: 'Preprint released: Measuring and Mitigating Solution Mode Collapse in RLVR, accepted to MATH-AI...',
           description: "",
+          section: "News",},{id: "news-workshop-paper-accepted-poster-at-socialagent-at-neurips-2026-can-language-models-forecast-inductively",
+          title: 'Workshop paper accepted (poster) at SocialAgent at NeurIPS 2026: Can Language Models Forecast...',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
