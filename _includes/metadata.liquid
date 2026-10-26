@@ -21,6 +21,8 @@
 {% else %}
   {% assign site_title = site.title %}
 {% endif %}
+{% assign site_name = site.seo.site_name | default: site_title %}
+{% assign home_url = '/' | absolute_url %}
 {% capture page_meta_title %}
   {% if page.url == '/blog/index.html' %}
     {{ page.title }} | {{ site_title }}
@@ -34,7 +36,7 @@
     {{ site_title }}
   {% endif %}
 {% endcapture %}
-{% assign page_meta_title = page_meta_title | strip %}
+{% assign page_meta_title = page.seo_title | default: page_meta_title | strip %}
 {% assign page_description = page.description | default: site.description | strip | strip_newlines %}
 {% assign page_keywords = page.keywords | default: site.keywords %}
 {% assign social = site.data.socials %}
@@ -52,28 +54,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ page_meta_title }}</title>
-<meta name="author" content="{{ author_name }}">
-<meta name="description" content="{{ page_description }}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<title>{{ page_meta_title | escape }}</title>
+<meta name="author" content="{{ author_name | escape }}">
+<meta name="description" content="{{ page_description | escape }}">
+<meta name="robots" content="{% if page.noindex %}noindex, follow{% else %}index, follow, max-image-preview:large{% endif %}">
 {% if page_keywords %}
-  <meta name="keywords" content="{{ page_keywords }}">
+  <meta name="keywords" content="{{ page_keywords | escape }}">
 {% endif %}
 
 {% assign is_blog_post = false %}
-{% if page.url != '/blog/index.html' and page.url contains '/blog/' %}
-  {% unless page.url contains '/tag/' or page.url contains '/category/' %}
-    {% assign is_blog_post = true %}
-  {% endunless %}
+{% if page.collection == 'posts' %}
+  {% assign is_blog_post = true %}
 {% endif %}
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
-  <meta property="og:site_name" content="{{ site_title }}">
+  <meta property="og:site_name" content="{{ site_name | escape }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{{ page_meta_title }}">
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
-  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:title" content="{{ page_meta_title | escape }}">
+  <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
   {% if og_image_url %}
     <meta property="og:image" content="{{ og_image_url }}">
   {% endif %}
@@ -81,8 +81,8 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ page_meta_title }}">
-  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:title" content="{{ page_meta_title | escape }}">
+  <meta name="twitter:description" content="{{ page_description | escape }}">
   {% if og_image_url %}
     <meta name="twitter:image" content="{{ og_image_url }}">
   {% endif %}
@@ -92,7 +92,7 @@
   {% endif %}
 {% endif %}
 
-{% if site.serve_schema_org %}
+{% if site.serve_schema_org and page.noindex != true %}
   <!-- Schema.org -->
   {% comment %} Social links generator for "sameAs schema" {% endcomment %}
   {% assign sameaslinks = '' | split: ',' %}
@@ -242,19 +242,37 @@
     {% endfor %}
   {% endif %}
   {% assign primary_affiliation = site.seo.works_for | first %}
+  {% assign sameaslinks = sameaslinks | uniq %}
+  {% if page.url == '/' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "{{ home_url }}#website",
+        "url": {{ home_url | jsonify }},
+        "name": {{ site_name | jsonify }},
+        "alternateName": {{ author_name | jsonify }},
+        "publisher": { "@id": "{{ home_url }}#person" },
+        "inLanguage": {{ site.lang | jsonify }}
+      }
+    </script>
+  {% endif %}
   <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}ProfilePage{% endif %}",
+        "@type": "{% if is_blog_post %}BlogPosting{% elsif page.url == '/' %}ProfilePage{% else %}WebPage{% endif %}",
+        "@id": "{{ page.url | absolute_url }}#webpage",
         "url": "{{ page.url | absolute_url }}",
         "description": {{ page_description | jsonify }},
         "headline": {{ page_meta_title | jsonify }},
+        "isPartOf": { "@id": "{{ home_url }}#website" },
         "author": {
           "@type": "Person",
           "@id": "{{ site.url }}{{ site.baseurl }}/#person",
           "name": {{ author_name | jsonify }},
           "url": "{{ site.url }}{{ site.baseurl }}/"
         },
+        {% if page.url == '/' %}
         "mainEntity": {
           "@type": "Person",
           "@id": "{{ site.url }}{{ site.baseurl }}/#person",
@@ -262,7 +280,7 @@
           "givenName": "{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %}",
           "familyName": "{{ site.last_name }}",
           "url": "{{ site.url }}{{ site.baseurl }}/",
-          "mainEntityOfPage": "{{ page.url | absolute_url }}"
+          "mainEntityOfPage": { "@id": "{{ home_url }}#webpage" }
           {% if og_image_url %},
           "image": "{{ og_image_url }}"
           {% endif %}
@@ -331,6 +349,17 @@
           "sameAs": {{ sameaslinks | jsonify }}
           {% endif %}
         },
+        {% endif %}
+        {% if is_blog_post %}
+        "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        {% if page.last_modified_at %}
+        "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+        {% endif %}
+        {% if og_image_url %}
+        "image": {{ og_image_url | jsonify }},
+        {% endif %}
+        {% endif %}
         "name": {{ page_meta_title | jsonify }}
     }
   </script>

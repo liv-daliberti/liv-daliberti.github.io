@@ -1,6 +1,7 @@
 ---
 layout: about
 title: about
+seo_title: Liv d'Aliberti | Princeton Computer Science
 permalink: /
 description: Liv G. d'Aliberti, also known as Liv d'Aliberti, is a Princeton Computer Science Ph.D. student researching reliable AI reasoning, reinforcement learning, RLVR solution diversity, and interpretable decision-making systems.
 keywords: Liv d'Aliberti, Liv G. d'Aliberti, Liv Galliker d'Aliberti, Liv Daliberti, Liv G Daliberti, Princeton Computer Science, RLVR, solution mode collapse, ModeBench, Re:Max, reinforcement learning, machine behavior, reliable AI, interpretable AI
@@ -19,6 +20,8 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+
+I'm Liv d'Aliberti, a Computer Science Ph.D. student at Princeton University. I publish as Liv G. d'Aliberti.
 
 Advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://hamlab.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti), I study how learned agents reason, decide, and change behavior, focusing on reliability, interpretability, and empirically grounded evaluation at scale.
 

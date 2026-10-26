@@ -66,6 +66,7 @@ serve_schema_org: true # Include Schema.org in the HTML head
 og_image: /assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 seo:
+  site_name: Liv d'Aliberti
   alternate_names:
     - Liv d'Aliberti
     - Liv G. d'Aliberti
@@ -274,6 +275,10 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: "google*.html"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
@@ -284,7 +289,7 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  # exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude: ["robots.txt"] # crawler directives must stay on separate lines
 
 # -----------------------------------------------------------------------------
 # Terser
