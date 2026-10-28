@@ -4,7 +4,11 @@ layout: default
 {% assign paper = site.data.research[page.research_id] %}
 <article class="research-paper">
   <header class="research-header">
-    <a class="research-back" href="{{ '/publications/' | relative_url }}">← All publications</a>
+    <nav class="research-back" aria-label="Research navigation">
+      <a href="{{ '/research/' | relative_url }}">← Research explained</a>
+      <span aria-hidden="true"> · </span>
+      <a href="{{ '/publications/' | relative_url }}">All publications</a>
+    </nav>
     <p class="research-kicker">Research explained · {{ paper.year }}</p>
     <h1>{{ paper.title }}</h1>
     <p class="research-deck">{{ paper.question }}</p>
@@ -57,5 +61,8 @@ layout: default
       {% endfor %}
     </ul>
   </aside>
-  <p class="research-updated">Explanation updated October 28, 2026. Publication details and experimental scope are stated above.</p>
+  <p class="research-updated">
+    Explanation updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%B %-d, %Y' }}</time>.
+    Publication details and experimental scope are stated above.
+  </p>
 </article>
