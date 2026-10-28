@@ -20,6 +20,18 @@ layout: default
       <p>{{ paper.takeaway }}</p>
     </div>
   </header>
+  {% if page.sections %}
+    <nav class="research-contents" aria-label="On this page">
+      <p>On this page</p>
+      <ul>
+        {% for section in page.sections %}
+          <li>
+            <a href="#{{ section.id }}">{{ section.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
   <div class="research-body">{{ content }}</div>
   <section class="research-abstract" id="abstract" aria-labelledby="abstract-title">
     <h2 id="abstract-title">Paper abstract</h2>
@@ -28,7 +40,10 @@ layout: default
   <section class="research-citation" id="citation" aria-labelledby="citation-title">
     <h2 id="citation-title">Cite this work</h2>
     <p>Please cite the research paper. This page is an accompanying explanation.</p>
-    <pre><code>{{ paper.bibtex | escape }}</code></pre>
+    <details>
+      <summary>Show BibTeX citation</summary>
+      <pre><code>{{ paper.bibtex | escape }}</code></pre>
+    </details>
   </section>
   <aside class="research-related" aria-labelledby="related-title">
     <h2 id="related-title">Related research</h2>

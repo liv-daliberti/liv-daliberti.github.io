@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-28-figures-readability",
+  "prepared_at": "2026-10-28T16:47:23.115129-04:00",
+  "previous_publication_commit": "0806755feef8971193ff006a472481e108f5c7e0",
+  "protocol_sha256": "03722d23976cd22b0601823425f786ef1efdcac5fa1485ed278b24ac03d7721c",
+  "reason": "User requested more pictures from each paper and improved readability.",
+  "changes": [
+    "Three original PDF figure crops added to each of the three intervention pages (nine total), with figure source links, alt text, and full-size images.",
+    "Larger type, narrower prose, shorter paragraphs, section navigation, and expandable BibTeX.",
+    "Removed decorative quotations and a redundant comparison table."
+  ],
+  "measurement_note": "Content revision during initial follow-up, not a new trial or causal comparison. Original launch time, 28-day follow-up, reference works, and frozen question panel remain unchanged. Public verification and publication commit are recorded separately in the local deployment receipt.",
+  "content_sha256": {
+    "_pages/research-rlvr.html": "4efd16f414c5466b955e78fe919d20ce6498726ef3251da16b5bce802a7ef784",
+    "_pages/research-insight.md": "ebe438ecd25072cba8c6842c8b65386aeb30161cce08f5ecc7493cd3f93371a3",
+    "_pages/research-behavior.md": "7a9991c65cf6caf9d68c6300e83495e8f33d52d9e42935f0fdf0e362d23fb249",
+    "_data/research.json": "5495a3fb6421e66a221e0b1aaa5d7f672d1185c381c8c0722be2d15feccdc917",
+    "_layouts/research.liquid": "4f46e47d6772611d18fdd288626b79043320090a6098b1f26d9725115e105672",
+    "_includes/research_metadata.liquid": "f1af40fcbe80882782072b3fa1dfb3dd67ae89d3018eee7a6d8e31476af3f463",
+    "_includes/research_figure.liquid": "8f98afe05bee97b315b9f18599d82b2eb235eb4853ebf17bbbfe731beb24868f",
+    "assets/css/research.css": "4c717fa50450af0fab5b7b9772c8878b240990563baa97da5b89c8867723de68",
+    "bin/geo/paper-figures.json": "bb41ad2517f3253d582313b78887a97b335d657606d13b10a0b222869a77941a"
+  }
+}

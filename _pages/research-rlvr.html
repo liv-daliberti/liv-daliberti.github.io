@@ -5,13 +5,21 @@ permalink: /research/rlvr-mode-collapse/
 title: Measuring and Mitigating Solution Mode Collapse in RLVR
 description: Why RLVR can reduce correct solution diversity, how ModeBench measures it, and how Re:Max preserves discovered modes. An illustrated research explainer.
 og_image: /assets/research/rlvr/03-measured-concentration.png
+sections:
+  - id: puzzle
+    label: A six-solution puzzle
+  - id: accuracy
+    label: Accuracy and variety
+  - id: training
+    label: What training changes
+  - id: sampling
+    label: Try the sampling demo
+  - id: modebench
+    label: Inside ModeBench
+  - id: remax
+    label: How replay helps
 ---
 
-<p><em>When several answers are right, why does AI keep giving us the same one?</em></p>
-<blockquote>
-  <p>“It is better to solve one problem five different ways, than to solve five different problems one way.”</p>
-  <p>— George Pólya, as quoted by <a href="https://www.mit.edu/~dxh/marvin/web.media.mit.edu/~minsky/OLPC-4.html">Marvin Minsky</a></p>
-</blockquote>
 <p>
   Suppose you ask an AI to solve a math problem. It gets the answer right. Then you ask it to find another way to solve it, and it gives you
   essentially the same solution. That's a little disappointing. There might be five perfectly good ways to solve the problem, but you're only seeing
@@ -22,7 +30,7 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   a programmer might want an alternative implementation, or an architect may need other designs that satisfy the same constraints. We need AI systems
   that can help us find alternatives, not just a single right way.
 </p>
-<h2>One puzzle, six correct answers</h2>
+<h2 id="puzzle">One puzzle, six correct answers</h2>
 <p>
   Consider a triangle with three numbered corners: node 1 at the top, node 2 at the bottom left, and node 3 at the bottom right. Color the corners
   with <strong>blue, orange and teal</strong> so that connected corners have different colors. Every pair is connected. How many different valid
@@ -43,8 +51,8 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   />
   <figcaption>
     <em
-      >Figure 1. All six valid colorings of the numbered triangle. Each uses every color exactly once. This is a simplified illustration of the
-      study’s graph-coloring tasks.</em
+      >Explainer figure 1. All six valid colorings of the numbered triangle. Each uses every color exactly once. This is a simplified illustration of
+      the study’s graph-coloring tasks.</em
     >
   </figcaption>
 </figure>
@@ -54,16 +62,8 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   This example separates two questions:
   <strong>(1) How often is the model able to answer correctly? (2) How many different correct solutions can the AI produce?</strong>
 </p>
-<blockquote>
-  <p>
-    “Variety’s the very spice of life,<br />
-    That gives it all its flavor.”
-  </p>
-  <p>
-    — William Cowper, <a href="https://www.eighteenthcenturypoetry.org/works/o3795-w0020.shtml"><em>The Task</em>, Book II (1785)</a>
-  </p>
-</blockquote>
-<h2>Correctness does not tell the whole story</h2>
+
+<h2 id="accuracy">Correctness does not tell the whole story</h2>
 <p>
   This is the problem of <strong>mode collapse</strong>: when an AI’s outputs become concentrated on a few solutions. Here, a “mode” means a distinct
   answer or approach, defined by the task. The illustrative graph below shows two AIs with 90% accuracy. One spreads correct answers evenly across
@@ -78,7 +78,7 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
     width="680"
   />
   <figcaption>
-    <em>Figure 2. Illustrative distributions: identical accuracy, very different variety. Letters identify the six coloring modes.</em>
+    <em>Explainer figure 2. Illustrative distributions: identical accuracy, very different variety. Letters identify the six coloring modes.</em>
   </figcaption>
 </figure>
 
@@ -102,8 +102,8 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   />
   <figcaption>
     <em
-      >Figure 3. Seven AIs, 128 Level-3 graph problems each, eight answers per problem. Whiskers: 95% bootstrap intervals. Reference: uniform sampling
-      over valid colorings, matching each problem’s correct-answer count.</em
+      >Explainer figure 3. Seven AIs, 128 Level-3 graph problems each, eight answers per problem. Whiskers: 95% bootstrap intervals. Reference:
+      uniform sampling over valid colorings, matching each problem’s correct-answer count.</em
     >
   </figcaption>
 </figure>
@@ -114,7 +114,7 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   as after AI edits, different people’s essays became more alike in style and meaning. Our puzzles give us a way to measure the gap between the
   answers the model gives and the set of correct solution modes.
 </p>
-<h2>Why solutions can become concentrated</h2>
+<h2 id="training">Why solutions can become concentrated</h2>
 <p>
   Why does mode collapse happen? We suspect that part of the problem comes from how we train these models. In the setup we study, the AI first
   generates answers and then a checker scores those answers. The AI is then updated based on the checker-provided scores. However, a checker that only
@@ -123,8 +123,8 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
 </p>
 <p>
   The training loop reinforces this problem. If the AI already tends to give one solution, that solution shows up more often in training and, as a
-  result, gets more opportunities to be reinforced. As Figure 4 shows, an answer that gets ahead early in training can keep becoming more prevalent
-  until other correct solutions rarely show up.
+  result, gets more opportunities to be reinforced. As Explainer figure 4 shows, an answer that gets ahead early in training can keep becoming more
+  prevalent until other correct solutions rarely show up.
 </p>
 <figure>
   <img
@@ -134,10 +134,16 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
     src="/assets/research/rlvr/04-feedback.png"
     width="680"
   />
-  <figcaption><em>Figure 4. A possible training dynamic. Equal rewards alone do not force this loop.</em></figcaption>
+  <figcaption><em>Explainer figure 4. A possible training dynamic. Equal rewards alone do not force this loop.</em></figcaption>
 </figure>
 
-<h2>More attempts help, but preferences persist</h2>
+{% include research_figure.liquid image="/assets/research/rlvr/paper-01-training.png" width="1588" height="512" title="Training can improve accuracy
+while losing alternatives" alt="Mode counts across training checkpoints: Dr.GRPO increasingly favors one correct coloring, while Re:Max retains
+several correct coloring modes." caption="Compare the colored bars across checkpoints: grey is invalid; other colors are distinct valid modes. Dr.GRPO
+concentrates on one mode as accuracy improves. Re:Max retains more alternatives in this motivating graph-coloring example. The number above each bar
+counts distinct correct modes." source="https://arxiv.org/html/2610.11064v2#S0.F1" number="1" %}
+
+<h2 id="sampling">More attempts help, but preferences persist</h2>
 <p>
   If we ask the model more times, does this solve the problem? Sometimes. But extra attempts draw from the AI’s pre-existing preferences. If one
   alternative has a one-in-a-thousand chance on each independent attempt, even 100 attempts give only about a 9.5% chance of seeing it.
@@ -150,7 +156,9 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
     src="/assets/research/rlvr/05-sampling.png"
     width="680"
   />
-  <figcaption><em>Figure 5. Independent toy draws at 90% correctness. Rare alternatives can take many attempts to discover.</em></figcaption>
+  <figcaption>
+    <em>Explainer figure 5. Independent toy draws at 90% correctness. Rare alternatives can take many attempts to discover.</em>
+  </figcaption>
 </figure>
 
 <p>
@@ -158,8 +166,8 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   each alternative.
 </p>
 <p>
-  Figure 5 shows how an AI’s underlying answer distribution affects how many different correct solutions it finds over repeated attempts. The curves
-  compare an evenly spread AI with one that mostly repeats the same solution.
+  Explainer figure 5 shows how an AI’s underlying answer distribution affects how many different correct solutions it finds over repeated attempts.
+  The curves compare an evenly spread AI with one that mostly repeats the same solution.
 </p>
 <section class="research-illustration" data-mode-illustration aria-labelledby="sampling-title">
   <h3 id="sampling-title">Try it: same accuracy, different variety</h3>
@@ -200,7 +208,7 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
   less memory or is easier to read. An architect can have a good design and still need another one when the budget changes. The point of asking for
   alternatives isn't just to get another answer. It's to have something to compare, so we can decide for ourselves what to do next.
 </p>
-<p><em>Figures 1, 2, 4 and 5 are explanatory illustrations. Figure 3 reports results from our study.</em></p>
+<p><em>Explainer figures 1, 2, 4 and 5 are explanatory illustrations. Explainer figure 3 reports results from our study.</em></p>
 
 <section id="modebench">
   <h2>What does ModeBench count as a different solution?</h2>
@@ -213,6 +221,12 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
     The five domains cover graph coloring, Countdown arithmetic, executable Python, algebraic action sequences (MathIR), and constrained planning
     (PantryPlan). The <a href="https://github.com/liv-daliberti/modeBench">benchmark guide</a> documents their validators and mode definitions.
   </p>
+  {% include research_figure.liquid image="/assets/research/rlvr/paper-02-modebench.png" width="1592" height="380" title="Five domains with verifiable
+  alternatives" alt="ModeBench examples: different valid graph colorings, Countdown computation trees, executable Python, algebraic action sequences,
+  and feasible pantry plans." caption="Each domain shows two valid modes. Mode identity can refer to a different answer or a different computational
+  route, depending on the task. The validators distinguish these explicitly rather than treating different wording as a new mode."
+  source="https://arxiv.org/html/2610.11064v2#S2.F2" number="2" %}
+
   <p>
     The paper reports success and diversity separately. <strong>pass@K</strong> asks whether K attempts include a correct answer.
     <strong>Pairwise correct-mode diversity (PCMD)</strong> asks how often two correct responses belong to different modes. If all correct responses
@@ -228,6 +242,12 @@ og_image: /assets/research/rlvr/03-measured-concentration.png
     learning updates. This gives a rare discovery a continued training signal instead of allowing frequent modes to dominate the replay distribution.
     Re:Max combines this mechanism with MaxRL; the maintained Re:Dr variant uses Dr.GRPO.
   </p>
+  {% include research_figure.liquid image="/assets/research/rlvr/paper-07-replay.png" width="1592" height="456" title="Remember a discovery while
+  searching for the next one" alt="Reward-only updates discard mode identity; Re:Max combines fresh MaxRL search with uniform replay to retain modes A
+  and B while adding C." caption="Follow the two paths. The top diagram illustrates how a mode can disappear from a batch. Below, Re:Max rehearses one
+  verified exemplar per discovered mode alongside fresh MaxRL updates. This is the paper’s mechanism diagram, not an additional experimental result."
+  source="https://arxiv.org/html/2610.11064v2#S3.F7" number="7" %}
+
   <p>
     The replay bank is built from generated, verified answers. It is not a catalogue of every possible solution, and it cannot rehearse a mode that
     has never been discovered. The <a href="https://github.com/liv-daliberti/remax">Re:Max guide</a> distinguishes maintained training recipes,
