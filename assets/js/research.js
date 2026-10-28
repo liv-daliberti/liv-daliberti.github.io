@@ -18,9 +18,16 @@
       });
       buttons.forEach((button) => button.setAttribute("aria-pressed", String((button.dataset.distribution === "concentrated") === concentrated)));
       modes.querySelector("[data-draw-count]").textContent = n;
-      output.textContent = `${n} attempts: ${distinct.toFixed(2)} expected distinct correct modes. Expected correct answers: ${(0.9 * n).toFixed(1)}. Accuracy stays at 90% in both toy distributions.`;
+      output.textContent = `${n} attempts: ${distinct.toFixed(2)} expected distinct correct modes. Expected correct answers: ${(0.9 * n).toFixed(
+        1
+      )}. Accuracy stays at 90% in both toy distributions.`;
     };
-    buttons.forEach((button) => button.addEventListener("click", () => { concentrated = button.dataset.distribution === "concentrated"; render(); }));
+    buttons.forEach((button) =>
+      button.addEventListener("click", () => {
+        concentrated = button.dataset.distribution === "concentrated";
+        render();
+      })
+    );
     draws.addEventListener("input", render);
     render();
   }
@@ -33,7 +40,9 @@
       const a = 0.9 * (1 - weight) + 0.5 * weight;
       const b = 0.1 * (1 - weight) + 0.5 * weight;
       const kl = a * Math.log(a / b) + (1 - a) * Math.log((1 - a) / (1 - b));
-      output.textContent = `Action A: run 1 ${(100 * a).toFixed(0)}%, run 2 ${(100 * b).toFixed(0)}%. KL(run 1 ‖ run 2): ${Math.max(0, kl).toFixed(3)} nats. Shared-prior weight: ${slider.value}%.`;
+      output.textContent = `Action A: run 1 ${(100 * a).toFixed(0)}%, run 2 ${(100 * b).toFixed(0)}%. KL(run 1 ‖ run 2): ${Math.max(0, kl).toFixed(
+        3
+      )} nats. Shared-prior weight: ${slider.value}%.`;
     };
     slider.addEventListener("input", render);
     render();

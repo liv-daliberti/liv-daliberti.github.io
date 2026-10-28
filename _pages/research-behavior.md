@@ -11,7 +11,7 @@ og_image: /assets/img/publication_preview/behavior-consistent-rl.png
 
 Train the same reinforcement learning algorithm several times with different random seeds. Even when the resulting policies earn similar rewards, they can choose different actions and produce different trajectories. Return alone does not describe how reproducible their behavior is.
 
-*Behavior-Consistent Deep Reinforcement Learning* formalizes a complementary objective: learn policies that perform well **and** have similar behavior distributions across independent training runs. A policy may remain stochastic while satisfying this objective. Consistency across runs is different from demanding a deterministic action sequence within every rollout.
+_Behavior-Consistent Deep Reinforcement Learning_ formalizes a complementary objective: learn policies that perform well **and** have similar behavior distributions across independent training runs. A policy may remain stochastic while satisfying this objective. Consistency across runs is different from demanding a deterministic action sequence within every rollout.
 
 <div class="research-metrics">
   <div class="research-metric"><strong>18 tasks</strong><span>continuous-control tasks in dm_control</span></div>
@@ -57,12 +57,12 @@ On the 18-task dm_control suite, applying QED to SAC-LN and MAD-SAC reduced pair
 
 The consistency–performance tradeoff is important. Very strong constraints can lower returns and slow learning. The paper reports that behavior depends on the base algorithm and the schedule parameter; settings that work well for MAD-SAC are not automatically appropriate for a less stable learner. Reduced return variance is also algorithm-dependent.
 
-| Quantity | What to inspect |
-| --- | --- |
-| Return | Does the agent still solve the control task well? |
-| Inter-run policy divergence | Do independent training runs produce similar action distributions? |
-| Return variability | How stable is performance across independent runs? |
-| Sample efficiency | How much interaction is needed to reach the desired behavior and performance? |
+| Quantity                    | What to inspect                                                               |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| Return                      | Does the agent still solve the control task well?                             |
+| Inter-run policy divergence | Do independent training runs produce similar action distributions?            |
+| Return variability          | How stable is performance across independent runs?                            |
+| Sample efficiency           | How much interaction is needed to reach the desired behavior and performance? |
 
 The [evaluation protocol](https://arxiv.org/html/2605.21214v3#A5) measures policies on each method’s induced states. That choice is part of the interpretation: differences between methods can reflect both policy differences and the states they visit.
 

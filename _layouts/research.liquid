@@ -35,7 +35,9 @@ layout: default
     <ul>
       {% for item in site.data.research %}
         {% unless item[0] == page.research_id %}
-          <li><a href="{{ item[1].path | relative_url }}">{{ item[1].title }}</a> — {{ item[1].question }}</li>
+          <li>
+            <a href="{{ item[1].path | relative_url }}">{{ item[1].title }}</a> — {{ item[1].question }}
+          </li>
         {% endunless %}
       {% endfor %}
     </ul>

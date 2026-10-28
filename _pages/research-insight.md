@@ -11,7 +11,7 @@ og_image: /assets/img/publication_preview/illusion-insight.png
 
 A reasoning trace can look like a story of discovery: an initial approach, a phrase such as “wait, let me reconsider,” and a different answer. The important empirical question is whether the change actually makes the model more likely to solve the problem.
 
-In *The Illusion of Insight in Reasoning Models*, we investigate that question across training checkpoints, tasks, decoding temperatures, and model families. We distinguish an observable **reasoning shift** from a stronger operational claim about an **“aha” event**. A verbal cue or an ultimately correct answer does not establish that the intervening shift caused an improvement.
+In _The Illusion of Insight in Reasoning Models_, we investigate that question across training checkpoints, tasks, decoding temperatures, and model families. We distinguish an observable **reasoning shift** from a stronger operational claim about an **“aha” event**. A verbal cue or an ultimately correct answer does not establish that the intervening shift caused an improvement.
 
 <div class="research-metrics">
   <div class="research-metric"><strong>1M+</strong><span>reasoning traces in the analysis</span></div>
@@ -39,10 +39,10 @@ The annotation pipeline combines candidate detection with checks for a material 
 
 **A separate, deliberately triggered intervention could help.** When the model’s token-level entropy was high, prompting reconsideration improved accuracy in the evaluated settings. This supports investigating uncertainty-aware interventions. It does not make naturally occurring shifts equivalent to useful self-correction.
 
-| Observation or intervention | What it tells us | What it does not establish |
-| --- | --- | --- |
-| A trace contains a reconsideration cue | A candidate shift may be present | That an actual strategy change or improvement occurred |
-| Shifted traces have a different accuracy rate | There is an association worth explaining | That spontaneous shifting caused the difference |
+| Observation or intervention                        | What it tells us                                                          | What it does not establish                                                         |
+| -------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| A trace contains a reconsideration cue             | A candidate shift may be present                                          | That an actual strategy change or improvement occurred                             |
+| Shifted traces have a different accuracy rate      | There is an association worth explaining                                  | That spontaneous shifting caused the difference                                    |
 | Triggered reconsideration helps under high entropy | A specified intervention can improve performance in the evaluated setting | That every “think again” prompt helps, or that uncertainty is perfectly calibrated |
 
 The main [results section](https://arxiv.org/html/2601.00514v2#S6) separates these analyses. The reported interventions should be read together with their task, model, temperature, and triggering conditions.
