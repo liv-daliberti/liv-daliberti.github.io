@@ -19,6 +19,7 @@ profile:
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+last_modified_at: "2026-10-28T17:04:54-04:00"
 ---
 
 I'm Liv d'Aliberti, a Computer Science Ph.D. student at Princeton University. I publish as Liv G. d'Aliberti.
@@ -26,6 +27,8 @@ I'm Liv d'Aliberti, a Computer Science Ph.D. student at Princeton University. I 
 Advised by [Manoel Horta Ribeiro](https://manoelhortaribeiro.github.io/) and affiliated with the [Humans and Machines (HAM) Lab](https://humans.cs.princeton.edu/) and [Center for Information Technology Policy](https://citp.princeton.edu/people/liv-daliberti), I study how learned agents reason, decide, and change behavior, focusing on reliability, interpretability, and empirically grounded evaluation at scale.
 
 [CV (PDF)]({{ '/assets/pdf/cv.pdf' | relative_url }})
+
+Explore my [illustrated research guides]({{ '/research/' | relative_url }}): [solution diversity in RLVR]({{ '/research/rlvr-mode-collapse/' | relative_url }}), [“aha” moments in reasoning models]({{ '/research/illusion-of-insight/' | relative_url }}), and [behavioral consistency across RL training runs]({{ '/research/behavior-consistent-rl/' | relative_url }}). Each guide connects the main question to figures, findings, limitations, and the full paper.
 
 <ul class="research-snapshot" aria-label="Research focus">
   <li>

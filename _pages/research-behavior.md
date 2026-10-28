@@ -18,6 +18,8 @@ sections:
     label: When it is useful
   - id: limitations
     label: Limitations
+last_modified_at: "2026-10-28T17:04:54-04:00"
+explanation_published_at: "2026-10-28T15:51:44-04:00"
 ---
 
 <h2 id="question">Two successful agents can still behave differently</h2>

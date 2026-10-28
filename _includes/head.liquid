@@ -2,8 +2,11 @@
 {% include metadata.liquid %}
 {% if page.research_id %}
   {% include research_metadata.liquid %}
-  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
   <script defer src="{{ '/assets/js/research.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.research_id or page.research_hub %}
+  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
 {% endif %}
 
 <!-- Bootstrap & MDB -->

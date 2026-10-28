@@ -2,6 +2,8 @@
 """Validate the built paper pages, citations, assets, and discovery links."""
 import json
 import sys
+import xml.etree.ElementTree as ET
+from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -41,7 +43,15 @@ def main():
     papers = json.loads((source / "_data/research.json").read_text())
     publications = Document((built / "publications/index.html").read_text())
     home = Document((built / "index.html").read_text())
-    sitemap = (built / "sitemap.xml").read_text()
+    hub = Document((built / "research/index.html").read_text())
+    require(hub.h1_count == 1, "Research hub: expected exactly one h1")
+    require("/research/" in home.links and "/research/" in publications.links, "Research hub: missing discovery link")
+    sitemap = ET.parse(built / "sitemap.xml")
+    sitemap_urls = {node.findtext("{*}loc"): node for node in sitemap.findall("{*}url")}
+    research_sitemap = ET.parse(built / "research-sitemap.xml")
+    research_urls = {node.findtext("{*}loc"): node for node in research_sitemap.findall("{*}url")}
+    require(len(research_urls) == len(papers), "Research sitemap: wrong page count")
+    require("/research-sitemap.xml" in (built / "robots.txt").read_text(), "Research sitemap: absent from robots.txt")
     for key, paper in papers.items():
         text = (built / paper["path"].strip("/") / "index.html").read_text()
         meta, doc = Metadata(text), Document(text)
@@ -54,7 +64,22 @@ def main():
         require(articles[0]["abstract"] == paper["abstract"], f"{key}: abstract mismatch")
         require(len(articles[0]["author"]) == len(paper["authors"]), f"{key}: author schema mismatch")
         require(paper["path"] in publications.links and paper["path"] in home.links, f"{key}: missing discovery link")
-        require(paper["path"] in sitemap, f"{key}: absent from sitemap")
+        require(paper["path"] in hub.links and "/research/" in doc.links, f"{key}: missing research hub link")
+        require(paper["image"] in hub.assets and paper["paper_url"] in hub.links, f"{key}: incomplete research hub resources")
+        canonical = meta.canonicals[0]
+        require(canonical in sitemap_urls and canonical in research_urls, f"{key}: absent from sitemap")
+        lastmod = sitemap_urls[canonical].findtext("{*}lastmod")
+        require(lastmod and lastmod == research_urls[canonical].findtext("{*}lastmod"), f"{key}: missing or inconsistent modification date")
+        modified = datetime.fromisoformat(lastmod)
+        require(modified.tzinfo and modified <= datetime.now(modified.tzinfo), f"{key}: future or ambiguous modification date")
+        webpage = next(x for x in meta.schemas if x.get("@type") == "WebPage")
+        require(webpage.get("mainEntity", {}).get("@id") == articles[0]["@id"], f"{key}: missing paper–explanation relationship")
+        require(webpage.get("dateModified") == lastmod, f"{key}: inconsistent structured modification date")
+        images = research_urls[canonical].findall("{http://www.google.com/schemas/sitemap-image/1.1}image/{http://www.google.com/schemas/sitemap-image/1.1}loc")
+        image_paths = [urlsplit(node.text).path for node in images]
+        require(len(image_paths) == len(set(image_paths)) and set(image_paths) == set(paper["images"]), f"{key}: incomplete or duplicate image sitemap")
+        require(all(path in doc.assets for path in image_paths), f"{key}: sitemap image not present in page HTML")
+        require(all(urlsplit(node.text).netloc == urlsplit(canonical).netloc for node in images), f"{key}: nonlocal sitemap image")
         for asset in doc.assets:
             require((built / urlsplit(asset).path.lstrip("/")).is_file(), f"{key}: missing asset {asset}")
         for resource in paper["resources"]:
@@ -67,11 +92,11 @@ def main():
         else:
             require("citation_pdf_url" not in meta.metas, f"{key}: unhosted PDF declared as local")
         require("{{" not in text and "{%" not in text, f"{key}: unrendered Liquid")
-    print(f"Research checks passed for {len(papers)} paper pages, publication/home links, metadata, and local assets.")
+    print(f"Research checks passed for {len(papers)} paper pages, research hub, accurate sitemap dates, image discovery, metadata, and local assets.")
 
 
 if __name__ == "__main__":
     try:
         main()
-    except (ValueError, OSError, KeyError) as error:
+    except (ValueError, OSError, KeyError, ET.ParseError, StopIteration, IndexError) as error:
         sys.exit(f"Research check failed: {error}")

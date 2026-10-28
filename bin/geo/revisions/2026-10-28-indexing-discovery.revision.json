@@ -1,0 +1,33 @@
+{
+  "id": "2026-10-28-indexing-discovery",
+  "prepared_at": "2026-10-28T17:07:06.391417-04:00",
+  "previous_publication_commit": "48c446dedb4170ca4ae6a6f0dcd67fc3a473cd1e",
+  "protocol_sha256": "03722d23976cd22b0601823425f786ef1efdcac5fa1485ed278b24ac03d7721c",
+  "reason": "User requested greater likelihood of Google discovering, indexing, and using the research pages.",
+  "changes": [
+    "Added a linked research hub and contextual links from the homepage and publications page.",
+    "Added explicit, accurate content modification dates to the main sitemap and visible research pages.",
+    "Added a research/image sitemap listing the three canonical explanation URLs and their 14 figures, discoverable from robots.txt.",
+    "Connected existing WebPage metadata to the paper entity and added explanation dates and visible image URLs.",
+    "Extended deployment checks for research sitemap dates, image discovery, and hub links."
+  ],
+  "measurement_note": "Discovery and metadata revision during the existing prospective follow-up; preserves the original launch date, 28-day window, frozen 90-question panel, and paper findings. Public HTTP access is not proof of Google indexing or AI citation. Search Console inspection remains necessary.",
+  "content_sha256": {
+    "_pages/research.md": "412e7dd9702a5ace9bee8189d36b223b65d57d212748e98065307f0143e45936",
+    "_pages/research-sitemap.xml": "4bc4f102261a5349253836d5daee5476f6abdfff7a6ea28d2513a2c50857c1fe",
+    "_pages/research-rlvr.html": "f16ed798d81bf5d00a6838548c37f2bc6dcaebff634b9b55333a91f904d91b75",
+    "_pages/research-insight.md": "fa75d0881242a7812153c867e5be5c1644fbaff2185bc98110d56d42b90919f1",
+    "_pages/research-behavior.md": "7e54a18fd5472b83da69388c27714fca7d24bb294cc9f008594d94d5084bc8a8",
+    "_pages/about.md": "e74986857e80310bf07bdca6a88ed64414b5b02b37b15b32af3f6dc21be34bdc",
+    "_pages/publications.md": "d839a4a121f49035f3090623c767a389b2c9f911ec06da9d73e3bd64c22d0a69",
+    "_data/research.json": "2ca92daf89a7567d1bc5ef026a318cb235c462849a47132beda7c070b63634e9",
+    "_layouts/research.liquid": "e45af64d499f79172766fd2133ae6b514f790de6c7ebfecf937e6701ce203a6e",
+    "_includes/head.liquid": "445ed983c5504d83c72cd1eb9735204eea925fa4b1f2236f61064180f25fb814",
+    "_includes/metadata.liquid": "586b211ad2345e169ec173f2edc5df3f150304f81438547dfbcd6d580a831181",
+    "assets/css/research.css": "6758d356615e47fd8dbed840e9a9dc5a950c28e781913274a64674a03e0f1d8f",
+    "robots.txt": "4c145b0c5cea4bf52d4182aa447005a18b2ca5be8ed873636cb72fa8d8da4263",
+    ".github/workflows/deploy.yml": "d51671ecf6d6df8d02fb442389f22dd3008d4f7957c28fc891a881cd18ab123c",
+    "bin/check-research.py": "73c4a867d072005c345e6a77d1254f2d8bb6e56f9857a75f6c1ba3f3f59ad791",
+    "_includes/research_guides.liquid": "a47316be5cbc576c6720af6ca7f9632263b6f446d1bad78beed560951856a0f2"
+  }
+}

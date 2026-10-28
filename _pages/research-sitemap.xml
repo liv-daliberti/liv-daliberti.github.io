@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /research-sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% for research_page in site.pages %}
+    {% if research_page.research_id %}
+      {% assign paper = site.data.research[research_page.research_id] %}
+      <url>
+        <loc>{{ research_page.url | absolute_url | xml_escape }}</loc>
+        <lastmod>{{ research_page.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% for image_path in paper.images %}
+          <image:image><image:loc>{{ image_path | absolute_url | xml_escape }}</image:loc></image:image>
+        {% endfor %}
+      </url>
+    {% endif %}
+  {% endfor %}
+</urlset>
