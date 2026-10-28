@@ -1,0 +1,143 @@
+{
+  "rlvr-mode-collapse": {
+    "title": "Measuring and Mitigating Solution Mode Collapse in RLVR",
+    "question": "Can a reasoning model get more answers right while finding fewer ways to solve a problem?",
+    "authors": [
+      "Liv G. d’Aliberti",
+      "Marwa Abdulhai",
+      "Sofiia Druchyna",
+      "Peter Henderson",
+      "Manoel Horta Ribeiro"
+    ],
+    "venue": "The 6th Workshop on Mathematical Reasoning and AI at NeurIPS 2026",
+    "status": "Accepted to MATH-AI 2026",
+    "year": 2026,
+    "first_posted": "2026-10-08",
+    "arxiv": "2610.11064",
+    "version": "2610.11064v2",
+    "paper_url": "https://arxiv.org/abs/2610.11064",
+    "paper_versions": [
+      "https://arxiv.org/abs/2610.11064",
+      "https://doi.org/10.48550/arXiv.2610.11064"
+    ],
+    "takeaway": "Correctness and solution diversity are different properties. On ModeBench, RLVR can concentrate a model onto fewer correct solution modes even as accuracy holds or improves. Re:Max keeps one verified example per discovered mode and rehearses those modes uniformly, improving success and diversity in the tested settings.",
+    "resources": [
+      {
+        "label": "Read the paper",
+        "url": "https://arxiv.org/html/2610.11064v2"
+      },
+      {
+        "label": "ModeBench",
+        "url": "https://liv-daliberti.github.io/modeBench/"
+      },
+      {
+        "label": "Re:Max code and guide",
+        "url": "https://liv-daliberti.github.io/remax/"
+      },
+      {
+        "label": "Original companion",
+        "url": "https://can-your-ai-find-another-way.onrender.com/"
+      },
+      {
+        "label": "PDF",
+        "url": "/research/rlvr-mode-collapse/paper.pdf"
+      }
+    ],
+    "path": "/research/rlvr-mode-collapse/",
+    "abstract": "A language model (LM) can usually answer the same question in more than one way, but reinforcement learning with verifiable rewards (RLVR) is indifferent to which correct answer a model produces. A solution will earn the same reward whether it is the thousandth copy of a familiar answer or one the model has never produced before. Yet, there is potential value in having the model retain multiple correct solutions as it is trained. For instance, multiple modes may give users a choice and provide problem-solving strategies that improve overall model performance. Here, we introduce ModeBench , a benchmark of multi-solution tasks in which the verifier returns both correctness and mode discovered. We then use ModeBench to measure how solution diversity changes under RLVR post-training. We find that RLVR post-training concentrates probability onto fewer correct modes even as accuracy holds or improves, and moreover, that frontier models are already highly concentrated. We then introduce our solution, Re:Max, which stores one verified example per discovered mode in a replay buffer and trains on those stored modes uniformly. A solution found once is, therefore, practiced as often as one found repeatedly. Across three model scales, two RL objectives, and harder task constructions, replay improves both how often a policy succeeds and how many different ways it can succeed.",
+    "bibtex": "@inproceedings{rlvrmodecollapse2026,\n  title = {Measuring and Mitigating Solution Mode Collapse in RLVR},\n  author = {Liv G. d'Aliberti and Marwa Abdulhai and Sofiia Druchyna and Peter Henderson and Manoel Horta Ribeiro},\n  booktitle = {The 6th Workshop on Mathematical Reasoning and AI at NeurIPS 2026},\n  year = {2026},\n  url = {https://arxiv.org/abs/2610.11064}\n}",
+    "local_pdf": "/research/rlvr-mode-collapse/paper.pdf"
+  },
+  "illusion-of-insight": {
+    "title": "The Illusion of Insight in Reasoning Models",
+    "question": "Do reasoning models really have “aha” moments—and do those moments help?",
+    "authors": [
+      "Liv G. d’Aliberti",
+      "Manoel Horta Ribeiro"
+    ],
+    "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+    "status": "Published in ACL Findings 2026",
+    "year": 2026,
+    "first_posted": "2026-01-02",
+    "arxiv": "2601.00514",
+    "version": "2601.00514v2",
+    "doi": "10.18653/v1/2026.findings-acl.47",
+    "paper_url": "https://aclanthology.org/2026.findings-acl.47/",
+    "paper_versions": [
+      "https://arxiv.org/abs/2601.00514",
+      "https://aclanthology.org/2026.findings-acl.47/",
+      "https://doi.org/10.18653/v1/2026.findings-acl.47"
+    ],
+    "takeaway": "A mid-trace change of approach is not, by itself, evidence of useful self-correction. Across more than a million reasoning traces, spontaneous shifts were rare and seldom improved accuracy. In separate intervention experiments, triggering reconsideration when token entropy was high improved accuracy in the evaluated settings.",
+    "resources": [
+      {
+        "label": "Read the paper",
+        "url": "https://aclanthology.org/2026.findings-acl.47/"
+      },
+      {
+        "label": "Readable full text",
+        "url": "https://arxiv.org/html/2601.00514v2"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/liv-daliberti/Illusion-of-Reasoning"
+      },
+      {
+        "label": "Conference poster",
+        "url": "/assets/pdf/illusion-insight-acl-2026-poster.pdf"
+      },
+      {
+        "label": "PDF",
+        "url": "/research/illusion-of-insight/paper.pdf"
+      }
+    ],
+    "path": "/research/illusion-of-insight/",
+    "abstract": "Do reasoning models have “Aha!” moments? Prior work suggests that models like DeepSeek-R1-Zero undergo sudden mid-trace realizations that lead to accurate outputs, implying an intrinsic capacity for self-correction. Yet, it remains unclear whether such intrinsic shifts in reasoning strategy actually improve performance. Here, we study mid-reasoning shifts and instrument training runs to detect them. Our analysis spans 1 M+ reasoning traces, hundreds of training checkpoints, three reasoning domains, and multiple decoding temperatures and model architectures. We find that reasoning shifts are rare, do not become more frequent with training, and seldom improve accuracy, indicating that they do not correspond to prior perceptions of model insight. However, their effect varies with model uncertainty. Building on this finding, we show that artificially triggering extrinsic shifts under high entropy reliably improves accuracy. Our results show that mid-reasoning shifts are symptoms of unstable inference behavior rather than an intrinsic mechanism for self-correction.",
+    "bibtex": "@inproceedings{illusionofinsight2026,\n  title = {The Illusion of Insight in Reasoning Models},\n  author = {Liv G. d'Aliberti and Manoel Horta Ribeiro},\n  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},\n  year = {2026},\n  url = {https://aclanthology.org/2026.findings-acl.47/},\n  doi = {10.18653/v1/2026.findings-acl.47}\n}",
+    "local_pdf": "/research/illusion-of-insight/paper.pdf"
+  },
+  "behavior-consistent-rl": {
+    "title": "Behavior-Consistent Deep Reinforcement Learning",
+    "question": "Can independently trained reinforcement learning agents learn to behave similarly?",
+    "authors": [
+      "Marcel Hussing",
+      "Liv G. d’Aliberti",
+      "Claas Voelcker",
+      "Benjamin Eysenbach",
+      "Eric Eaton"
+    ],
+    "venue": "Workshop on Automated Reinforcement Learning at RLC 2026",
+    "status": "Accepted to AutoRL 2026",
+    "year": 2026,
+    "first_posted": "2026-05-20",
+    "arxiv": "2605.21214",
+    "version": "2605.21214v3",
+    "paper_url": "https://arxiv.org/abs/2605.21214",
+    "paper_versions": [
+      "https://arxiv.org/abs/2605.21214",
+      "https://doi.org/10.48550/arXiv.2605.21214"
+    ],
+    "takeaway": "Similar returns do not imply similar behavior. Q-value Expectile Disagreement (QED) adapts the entropy temperature using critic disagreement to encourage consistency across training runs. On 18 continuous-control tasks, suitable settings reduced cross-run policy divergence by about two orders of magnitude while retaining comparable returns; stronger constraints introduce performance and sample-efficiency tradeoffs.",
+    "resources": [
+      {
+        "label": "Read the paper",
+        "url": "https://arxiv.org/html/2605.21214v3"
+      },
+      {
+        "label": "arXiv record",
+        "url": "https://arxiv.org/abs/2605.21214"
+      },
+      {
+        "label": "Earlier project code",
+        "url": "https://github.com/liv-daliberti/similar-behavior"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.21214v3"
+      }
+    ],
+    "path": "/research/behavior-consistent-rl/",
+    "abstract": "Reinforcement learning (RL) often exhibits high variance across training runs, leading to unreliable performance and posing a major challenge to deployment in real-world domains. In this work, we address the challenge of cross-run policy divergence by formalizing the problem of behavior-consistent RL , where the objective is to obtain policies that are both high-performing and distributionally similar across training runs. Our key observation is that maximum-entropy RL provides a direct mechanism for controlling behavioral divergence by anchoring runs to a common (uniform) prior. We prove that, for Boltzmann policies, choosing the temperature proportional to Q -function disagreement bounds the pairwise KL divergence between the induced policies. However, we also show that naïvely increasing entropy might impair policy optimization while amplifying off-policy error. Building upon these observations, we propose Q -value Expectile Disagreement (QED), a state-dependent temperature schedule that uses double-critic disagreement as a single-run proxy for cross-run disagreement. Empirically, we demonstrate that across 18 continuous-control tasks, QED reduces across-run divergence by two orders of magnitude without sacrificing performance, resulting in a considerable reduction in return variance at modest sample-efficiency costs.",
+    "bibtex": "@inproceedings{behaviorconsistentrl2026,\n  title = {Behavior-Consistent Deep Reinforcement Learning},\n  author = {Marcel Hussing and Liv G. d'Aliberti and Claas Voelcker and Benjamin Eysenbach and Eric Eaton},\n  booktitle = {Workshop on Automated Reinforcement Learning at RLC 2026},\n  year = {2026},\n  url = {https://arxiv.org/abs/2605.21214}\n}"
+  }
+}

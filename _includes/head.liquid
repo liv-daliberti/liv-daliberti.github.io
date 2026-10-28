@@ -1,5 +1,10 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
+{% if page.research_id %}
+  {% include research_metadata.liquid %}
+  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/research.js' | relative_url }}"></script>
+{% endif %}
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">

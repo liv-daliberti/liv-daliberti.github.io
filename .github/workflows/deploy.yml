@@ -96,6 +96,8 @@ jobs:
           bundle exec jekyll build
       - name: Validate search metadata
         run: python3 bin/check-seo.py _site
+      - name: Validate research pages
+        run: python3 bin/check-research.py _site
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

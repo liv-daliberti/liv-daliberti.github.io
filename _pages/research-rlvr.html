@@ -1,0 +1,84 @@
+---
+layout: research
+research_id: rlvr-mode-collapse
+permalink: /research/rlvr-mode-collapse/
+title: Measuring and Mitigating Solution Mode Collapse in RLVR
+description: Why RLVR can reduce correct solution diversity, how ModeBench measures it, and how Re:Max preserves discovered modes. An illustrated research explainer.
+og_image: /assets/research/rlvr/03-measured-concentration.png
+---
+
+
+
+
+<p><em>When several answers are right, why does AI keep giving us the same one?</em></p>
+<blockquote>
+<p>“It is better to solve one problem five different ways, than to solve five different problems one way.”</p>
+<p>— George Pólya, as quoted by <a href="https://www.mit.edu/~dxh/marvin/web.media.mit.edu/~minsky/OLPC-4.html">Marvin Minsky</a></p>
+</blockquote>
+<p>Suppose you ask an AI to solve a math problem. It gets the answer right. Then you ask it to find another way to solve it, and it gives you essentially the same solution. That's a little disappointing. There might be five perfectly good ways to solve the problem, but you're only seeing one.</p>
+<p>But if we're using AI to explore what's possible, getting one right answer isn't always enough. For example, a student may need another explanation, a programmer might want an alternative implementation, or an architect may need other designs that satisfy the same constraints. We need AI systems that can help us find alternatives, not just a single right way.</p>
+<h2>One puzzle, six correct answers</h2>
+<p>Consider a triangle with three numbered corners: node 1 at the top, node 2 at the bottom left, and node 3 at the bottom right. Color the corners with <strong>blue, orange and teal</strong> so that connected corners have different colors. Every pair is connected. How many different valid colorings are there?</p>
+<p><strong>Solution.</strong> There are three choices for node 1, two remaining choices for node 2, and one for node 3: <strong>3 × 2 × 1 = 6 colorings</strong>. For example, blue / orange / teal and orange / blue / teal are both valid in node order 1 / 2 / 3. Because the nodes are numbered, swapping their colors counts as a different solution.</p>
+<figure><img alt="Six valid triangle colorings, listed in node order 1, 2, 3: A, blue/orange/teal; B, blue/teal/orange; C, orange/blue/teal; D, orange/teal/blue; E, teal/blue/orange; F, teal/orange/blue." decoding="async" loading="lazy" src="/assets/research/rlvr/01-graph-six-colorings.png" width="680"/><figcaption><em>Figure 1. All six valid colorings of the numbered triangle. Each uses every color exactly once. This is a simplified illustration of the study’s graph-coloring tasks.</em></figcaption></figure>
+
+<p>An AI that always returns coloring A can be perfectly correct while leaving five valid alternatives unexplored.</p>
+<p>This example separates two questions: <strong>(1) How often is the model able to answer correctly? (2) How many different correct solutions can the AI produce?</strong></p>
+<blockquote>
+<p>“Variety’s the very spice of life,<br/>
+That gives it all its flavor.”</p>
+<p>— William Cowper, <a href="https://www.eighteenthcenturypoetry.org/works/o3795-w0020.shtml"><em>The Task</em>, Book II (1785)</a></p>
+</blockquote>
+<h2>Correctness does not tell the whole story</h2>
+<p>This is the problem of <strong>mode collapse</strong>: when an AI’s outputs become concentrated on a few solutions. Here, a “mode” means a distinct answer or approach, defined by the task. The illustrative graph below shows two AIs with 90% accuracy. One spreads correct answers evenly across A–F; the other mostly repeats A.</p>
+<figure><img alt="Two illustrative AIs are both 90% correct. One spreads correct answers evenly across six solutions; the other puts 97% of correct answers on solution A." decoding="async" loading="lazy" src="/assets/research/rlvr/02-same-accuracy.png" width="680"/><figcaption><em>Figure 2. Illustrative distributions: identical accuracy, very different variety. Letters identify the six coloring modes.</em></figcaption></figure>
+
+<p>We found this pattern across <strong>all seven frontier AIs we tested</strong>, spanning GPT, Claude, Grok, Kimi and DeepSeek. In <a href="https://arxiv.org/html/2610.11064v2">our recent study</a>, we tested models on puzzles with multiple verifiable solutions, including graph coloring. Across these AIs, correct answers clustered around a few solutions.</p>
+<p>For example, we asked OpenAI’s GPT-5.6 Sol to solve 128 graph-coloring problems eight times each. All 1,024 answers were correct. But each problem had 4–12 valid colorings, and the AI found only 1.16 distinct solutions per problem on average. When we compared pairs of answers to the same problem, 95.1% repeated a coloring.</p>
+<figure><img alt="Seven tested AIs average 1.02–1.52 distinct correct colorings in eight attempts, versus uniform references of 4.35–4.40. Accuracy is 97.5–100%. Whiskers show 95% bootstrap intervals." decoding="async" loading="lazy" src="/assets/research/rlvr/03-measured-concentration.png" width="680"/><figcaption><em>Figure 3. Seven AIs, 128 Level-3 graph problems each, eight answers per problem. Whiskers: 95% bootstrap intervals. Reference: uniform sampling over valid colorings, matching each problem’s correct-answer count.</em></figcaption></figure>
+
+<p><a href="https://arxiv.org/abs/2310.06452">Earlier research</a> found that training AI with human feedback made answers less varied on summarization and instruction-following tasks. <a href="https://arxiv.org/html/2603.18161v1">Other researchers</a> saw a similar loss of variety in writing tasks, as after AI edits, different people’s essays became more alike in style and meaning. Our puzzles give us a way to measure the gap between the answers the model gives and the set of correct solution modes.</p>
+<h2>Why solutions can become concentrated</h2>
+<p>Why does mode collapse happen? We suspect that part of the problem comes from how we train these models. In the setup we study, the AI first generates answers and then a checker scores those answers. The AI is then updated based on the checker-provided scores. However, a checker that only rewards correctness gives every valid solution the same score. It doesn’t care whether the answer is new or one that the AI has given a thousand times.</p>
+<p>The training loop reinforces this problem. If the AI already tends to give one solution, that solution shows up more often in training and, as a result, gets more opportunities to be reinforced. As Figure 4 shows, an answer that gets ahead early in training can keep becoming more prevalent until other correct solutions rarely show up.</p>
+<figure><img alt="A possible loop: already more likely, sampled more often, more opportunities for reinforcement, then more likely again." decoding="async" loading="lazy" src="/assets/research/rlvr/04-feedback.png" width="680"/><figcaption><em>Figure 4. A possible training dynamic. Equal rewards alone do not force this loop.</em></figcaption></figure>
+
+<h2>More attempts help, but preferences persist</h2>
+<p>If we ask the model more times, does this solve the problem? Sometimes. But extra attempts draw from the AI’s pre-existing preferences. If one alternative has a one-in-a-thousand chance on each independent attempt, even 100 attempts give only about a 9.5% chance of seeing it.</p>
+<figure><img alt="At 90% correctness, evenly spread answers uncover 4.37 distinct solutions in eight attempts on average; concentrated answers uncover 1.21. More attempts uncover alternatives more slowly under concentration." decoding="async" loading="lazy" src="/assets/research/rlvr/05-sampling.png" width="680"/><figcaption><em>Figure 5. Independent toy draws at 90% correctness. Rare alternatives can take many attempts to discover.</em></figcaption></figure>
+
+<p>Both toy AIs are correct on 90% of independent attempts. One spreads its correct answers equally across A–F; the other assigns 97% to A and 0.6% to each alternative.</p>
+<p>Figure 5 shows how an AI’s underlying answer distribution affects how many different correct solutions it finds over repeated attempts. The curves compare an evenly spread AI with one that mostly repeats the same solution.</p>
+<section class="research-illustration" data-mode-illustration aria-labelledby="sampling-title">
+<h3 id="sampling-title">Try it: same accuracy, different variety</h3>
+<p>Both toy models are correct 90% of the time. Change how their correct answers are distributed, then increase the sampling budget.</p>
+<div class="research-controls"><button type="button" data-distribution="even" aria-pressed="false">Even across six modes</button><button type="button" data-distribution="concentrated" aria-pressed="true">97% on one mode</button></div>
+<label for="mode-draws">Independent attempts: <span data-draw-count>8</span></label><input id="mode-draws" type="range" min="1" max="128" value="8">
+<div class="research-bars" aria-hidden="true"><div class="research-bar"><span></span></div><div class="research-bar"><span></span></div><div class="research-bar"><span></span></div><div class="research-bar"><span></span></div><div class="research-bar"><span></span></div><div class="research-bar"><span></span></div></div>
+<output aria-live="polite" for="mode-draws">With eight attempts: about 1.21 distinct correct modes under concentration, versus 4.37 under even sampling.</output>
+<small>Analytical illustration, not a model run or a measured frontier-model result. Expected distinct modes = Σ[1 − (1 − 0.9q)<sup>n</sup>], where q is a mode’s conditional probability given a correct answer. Percentages in the bars are conditional on correctness.</small>
+<noscript><p>The static example and figures remain available without JavaScript.</p></noscript>
+</section>
+<h2>Keeping alternatives in the training data</h2>
+<p><a href="https://github.com/liv-daliberti/remax">Our study</a> asks whether we can prevent mode collapse. We ask, when an AI discovers a different way to solve a problem, can we make sure that the solution remains part of the AI’s training data? We call this approach <strong>mode replay</strong>. We save one example of each new correct solution, then make sure the AI practices it as often as the others. In our experiments, the AI got more answers right and found more ways to solve the problems. We can’t replay a solution it never finds, though. And the rules are much clearer for these puzzles than for something like writing, where two answers can look different and still say the same thing.</p>
+<p>Sometimes you need a second explanation before a problem makes sense. Or your code works, but you want to see whether another implementation uses less memory or is easier to read. An architect can have a good design and still need another one when the budget changes. The point of asking for alternatives isn't just to get another answer. It's to have something to compare, so we can decide for ourselves what to do next.</p>
+<p><em>Figures 1, 2, 4 and 5 are explanatory illustrations. Figure 3 reports results from our study.</em></p>
+
+
+<section id="modebench">
+<h2>What does ModeBench count as a different solution?</h2>
+<p>ModeBench pairs a correctness verifier with a task-specific mode identity. Two valid outputs count as the same mode when the verifier assigns them the same identity. A different wording alone is insufficient. Depending on the domain, a mode can mean a different valid answer or a different computational route to the same answer.</p>
+<p>The five domains cover graph coloring, Countdown arithmetic, executable Python, algebraic action sequences (MathIR), and constrained planning (PantryPlan). The <a href="https://liv-daliberti.github.io/modeBench/">benchmark guide</a> documents their validators and mode definitions.</p>
+<p>The paper reports success and diversity separately. <strong>pass@K</strong> asks whether K attempts include a correct answer. <strong>Pairwise correct-mode diversity (PCMD)</strong> asks how often two correct responses belong to different modes. If all correct responses use one mode, PCMD is zero; it is undefined when there is insufficient correct-answer support. See <a href="https://arxiv.org/html/2610.11064v2#S2.SS1">Section 2.1</a> and <a href="https://arxiv.org/html/2610.11064v2#A1">Appendix A</a> for estimators and eligibility rules.</p>
+</section>
+<section id="remax">
+<h2>How does Re:Max preserve discoveries?</h2>
+<p>For each prompt, retain a verified exemplar of each mode the policy discovers. Rehearse the retained modes uniformly alongside fresh reinforcement learning updates. This gives a rare discovery a continued training signal instead of allowing frequent modes to dominate the replay distribution. Re:Max combines this mechanism with MaxRL; the maintained Re:Dr variant uses Dr.GRPO.</p>
+<p>The replay bank is built from generated, verified answers. It is not a catalogue of every possible solution, and it cannot rehearse a mode that has never been discovered. The <a href="https://liv-daliberti.github.io/remax/">Re:Max guide</a> distinguishes maintained training recipes, saved-result reproduction, and summary-only historical comparisons.</p>
+</section>
+<section id="limitations">
+<h2>What should we conclude—and what remains open?</h2>
+<p>The frontier-model comparison describes concentration under a particular evaluation protocol; it does not establish how those proprietary models were trained. The training experiments establish results for the tested tasks, objectives, and scales. They do not guarantee that replay preserves every mode or that the same verifier-based approach transfers directly to open-ended writing.</p>
+<p>The reported frontier example uses 128 Level-3 graph-coloring prompts with eight responses per prompt. Those observed values are separate from the toy distributions above. Likewise, graph-coloring mode identity treats the numbered nodes as distinct; changing the equivalence rule would change the diversity question.</p>
+<p>For a technical starting point, read <a href="https://arxiv.org/html/2610.11064v2#S2">ModeBench and the metrics</a>, <a href="https://arxiv.org/html/2610.11064v2#S3">the replay method</a>, and <a href="https://arxiv.org/html/2610.11064v2#S5">the experiments</a>.</p>
+</section>
