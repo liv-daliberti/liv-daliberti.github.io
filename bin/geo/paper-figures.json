@@ -1,0 +1,107 @@
+{
+  "rendering": "Original PDF figure crops, 4 pixels per PDF point (288 dpi), RGB, opaque white background; no scientific content redrawn. Captions are supplied as accessible HTML.",
+  "papers": {
+    "rlvr-mode-collapse": {
+      "arxiv_version": "2610.11064v2",
+      "pdf_url": "https://arxiv.org/pdf/2610.11064v2",
+      "pdf_sha256": "19a3386d4dbc990fee8621ece9cd1aa7a22fea9fa2e5496a6a81edcdc9488f82",
+      "figures": [
+        {
+          "figure": 1,
+          "pdf_page": 1,
+          "crop_points": [108, 469, 505, 597],
+          "asset": "/assets/research/rlvr/paper-01-training.png",
+          "width": 1588,
+          "height": 512,
+          "sha256": "b288868400dc4ad7703ffc2c6c1cc39e82e8665c69e976f4abc1f24bd4889267"
+        },
+        {
+          "figure": 2,
+          "pdf_page": 3,
+          "crop_points": [108, 80, 506, 175],
+          "asset": "/assets/research/rlvr/paper-02-modebench.png",
+          "width": 1592,
+          "height": 380,
+          "sha256": "31edc3a0322e03c0beb66d7d2fadf659ef79c2fd89f1e8f21681845caf975ed1"
+        },
+        {
+          "figure": 7,
+          "pdf_page": 6,
+          "crop_points": [108, 566, 506, 680],
+          "asset": "/assets/research/rlvr/paper-07-replay.png",
+          "width": 1592,
+          "height": 456,
+          "sha256": "85d6b47958f7ab12642ca790d4b42b365f9c24c3726cfc3fad494feff0d0417c"
+        }
+      ]
+    },
+    "illusion-of-insight": {
+      "arxiv_version": "2601.00514v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.00514v2",
+      "pdf_sha256": "236f043ac98c4bcc5aca6624ccaf473fa4735f94e5c901cbcead31f7e03930ec",
+      "figures": [
+        {
+          "figure": 1,
+          "pdf_page": 1,
+          "crop_points": [304, 219, 528, 381],
+          "asset": "/assets/research/insight/paper-01-aha.png",
+          "width": 896,
+          "height": 648,
+          "sha256": "4039d5905c5093c7d2fa2d16ebf734718fb9c0f9b27dd7a9ef293e6fd76db196"
+        },
+        {
+          "figure": 3,
+          "pdf_page": 5,
+          "crop_points": [70, 71, 527, 228],
+          "asset": "/assets/research/insight/paper-03-domains.png",
+          "width": 1828,
+          "height": 628,
+          "sha256": "aebc97aae9b6204843b5e526b5d40c29e91d83b77e83d60e015c7fd8b16587ad"
+        },
+        {
+          "figure": 4,
+          "pdf_page": 7,
+          "crop_points": [304, 69, 528, 209],
+          "asset": "/assets/research/insight/paper-04-prevalence.png",
+          "width": 896,
+          "height": 560,
+          "sha256": "ffebeb6886a130bdb389e24b81b8bfdbe867bf3d61eebed755ec55d7135959db"
+        }
+      ]
+    },
+    "behavior-consistent-rl": {
+      "arxiv_version": "2605.21214v3",
+      "pdf_url": "https://arxiv.org/pdf/2605.21214v3",
+      "pdf_sha256": "62b4c43884d4fb9fd608029265c711a43050977b101c9b8cb3e1062dea6f09da",
+      "figures": [
+        {
+          "figure": 1,
+          "pdf_page": 2,
+          "crop_points": [71, 70, 542, 246],
+          "asset": "/assets/research/behavior/paper-01-rollouts.png",
+          "width": 1884,
+          "height": 704,
+          "sha256": "c4ca11150e54f681e51f9a60fc3ea4d4ab038208cc604b7be4f5f999c251d5d5"
+        },
+        {
+          "figure": 3,
+          "pdf_page": 9,
+          "crop_points": [71, 72, 542, 226],
+          "asset": "/assets/research/behavior/paper-03-results.png",
+          "width": 1884,
+          "height": 616,
+          "sha256": "acfeed133c4e2d99986f70d6ec502ccbc6a612b4fe1f8d9615d80fcabebaff2a"
+        },
+        {
+          "figure": 5,
+          "pdf_page": 11,
+          "crop_points": [134, 70, 483, 208],
+          "asset": "/assets/research/behavior/paper-05-temperature.png",
+          "width": 1396,
+          "height": 552,
+          "sha256": "97f546001ec23d6c1f6af8dfadd8d54e72f958c3289bcbdf0d2220bd3e84e000"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<figure class="research-paper-figure{% if include.compact %} research-paper-figure-compact{% endif %}">
+  <a
+    class="research-figure-image"
+    href="{{ include.image | relative_url }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="Open full-size figure: {{ include.title | escape }}"
+  >
+    <img
+      src="{{ include.image | relative_url }}"
+      alt="{{ include.alt | escape }}"
+      width="{{ include.width }}"
+      height="{{ include.height }}"
+      loading="lazy"
+      decoding="async"
+    >
+  </a>
+  <figcaption>
+    <strong>{{ include.title }}</strong> {{ include.caption }}
+    <span class="research-figure-links">
+      <a href="{{ include.source }}">Paper figure {{ include.number }}</a>
+      <a href="{{ include.image | relative_url }}" target="_blank" rel="noopener">Open full-size image ↗</a>
+    </span>
+  </figcaption>
+</figure>

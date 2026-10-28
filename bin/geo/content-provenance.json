@@ -14,11 +14,14 @@
     "Integrated into the existing academic website layout",
     "Added paper metadata, abstract, citation and maintained artifact links",
     "Added an analytical sampling illustration",
-    "Added task definitions, metric interpretation and limitations"
+    "Added task definitions, metric interpretation and limitations",
+    "Added three original PDF figure crops per paper, with source-figure links, accessible descriptions, and full-size images",
+    "Improved typography, section navigation, paragraph length, and mobile figure reading"
   ],
   "paper_versions": {
     "rlvr-mode-collapse": "2610.11064v2",
     "illusion-of-insight": "2601.00514v2",
     "behavior-consistent-rl": "2605.21214v3"
-  }
+  },
+  "figure_manifest": "bin/geo/paper-figures.json"
 }
