@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{% assign paper = site.data.research[page.research_id] %}
+<article class="research-paper">
+  <header class="research-header">
+    <a class="research-back" href="{{ '/publications/' | relative_url }}">← All publications</a>
+    <p class="research-kicker">Research explained · {{ paper.year }}</p>
+    <h1>{{ paper.title }}</h1>
+    <p class="research-deck">{{ paper.question }}</p>
+    <p class="research-authors">{{ paper.authors | join: ' · ' }}</p>
+    <p class="research-venue">{{ paper.venue }} · {{ paper.status }}</p>
+    <nav class="research-resources" aria-label="Paper and research resources">
+      {% for resource in paper.resources %}
+        <a href="{{ resource.url }}">{{ resource.label }}</a>
+      {% endfor %}
+    </nav>
+    <div class="research-takeaway">
+      <h2>The finding</h2>
+      <p>{{ paper.takeaway }}</p>
+    </div>
+  </header>
+  <div class="research-body">{{ content }}</div>
+  <section class="research-abstract" id="abstract" aria-labelledby="abstract-title">
+    <h2 id="abstract-title">Paper abstract</h2>
+    <p>{{ paper.abstract }}</p>
+  </section>
+  <section class="research-citation" id="citation" aria-labelledby="citation-title">
+    <h2 id="citation-title">Cite this work</h2>
+    <p>Please cite the research paper. This page is an accompanying explanation.</p>
+    <pre><code>{{ paper.bibtex | escape }}</code></pre>
+  </section>
+  <aside class="research-related" aria-labelledby="related-title">
+    <h2 id="related-title">Related research</h2>
+    <ul>
+      {% for item in site.data.research %}
+        {% unless item[0] == page.research_id %}
+          <li>
+            <a href="{{ item[1].path | relative_url }}">{{ item[1].title }}</a> — {{ item[1].question }}
+          </li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </aside>
+  <p class="research-updated">Explanation updated October 28, 2026. Publication details and experimental scope are stated above.</p>
+</article>

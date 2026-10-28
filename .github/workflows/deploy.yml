@@ -96,10 +96,19 @@ jobs:
           bundle exec jekyll build
       - name: Validate search metadata
         run: python3 bin/check-seo.py _site
+      - name: Validate research pages
+        run: python3 bin/check-research.py _site
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Save reviewable site preview
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-site-preview
+          path: _site
+          retention-days: 7
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

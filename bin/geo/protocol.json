@@ -1,0 +1,757 @@
+{
+  "version": 1,
+  "prepared_at": "2026-10-28T15:37:49.803079-04:00",
+  "timezone": "America/New_York",
+  "design": "Prospective observational pilot: three published paper pages and six topic-different reference works; no random assignment",
+  "intervention": "Publish explanatory HTML pages, accurate scholarly metadata, maintained resource links, and internal discovery links",
+  "initial_followup_days": 28,
+  "baseline_lookback_days": 14,
+  "modes": [
+    "search",
+    "ai_mode"
+  ],
+  "primary_outcome": "Paper-family source-link presence on topic queries, separately by Search and AI Mode",
+  "secondary_outcomes": [
+    "New landing-page source-link presence",
+    "Correct author attribution after manual review",
+    "A distinctive finding accurately supported after manual review"
+  ],
+  "observational_unit": "One paper/question/mode per Eastern calendar date; duplicate runs do not increase weight",
+  "decision_rule": "Review coverage and weekly per-question outcomes after 28 days; do not declare lift without a valid baseline",
+  "limitations": [
+    "Google traffic blocks and unavailable AI Mode are missing observations, not citation failures",
+    "No valid paper-query pre-publication citation baseline was available at setup",
+    "Reference papers have different topics and ages; comparisons are descriptive, not causal treatment effects",
+    "Parser-detected AI source links require evidence review; lexical overlap is not proof of factual support",
+    "The query panel was registered after drafting content and before publication; it is not an independent held-out benchmark",
+    "Questions are author-generated research prompts, not a representative sample of real search demand",
+    "No new analytics service is enabled; Search Console and human engagement data are not connected"
+  ],
+  "synthetic_visits_are_engagement": false,
+  "papers": {
+    "rlvr-mode-collapse": {
+      "title": "Measuring and Mitigating Solution Mode Collapse in RLVR",
+      "cohort": "pilot",
+      "landing_page": "https://liv-daliberti.github.io/research/rlvr-mode-collapse/",
+      "work_urls": [
+        "https://arxiv.org/abs/2610.11064",
+        "https://liv-daliberti.github.io/research/rlvr-mode-collapse/",
+        "https://liv-daliberti.github.io/research/rlvr-mode-collapse/paper.pdf"
+      ]
+    },
+    "behavior-consistent-rl": {
+      "title": "Behavior-Consistent Deep Reinforcement Learning",
+      "cohort": "pilot",
+      "landing_page": "https://liv-daliberti.github.io/research/behavior-consistent-rl/",
+      "work_urls": [
+        "https://arxiv.org/abs/2605.21214",
+        "https://liv-daliberti.github.io/research/behavior-consistent-rl/"
+      ]
+    },
+    "illusion-of-insight": {
+      "title": "The Illusion of Insight in Reasoning Models",
+      "cohort": "pilot",
+      "landing_page": "https://liv-daliberti.github.io/research/illusion-of-insight/",
+      "work_urls": [
+        "https://arxiv.org/abs/2601.00514",
+        "https://aclanthology.org/2026.findings-acl.47/",
+        "https://doi.org/10.18653/v1/2026.findings-acl.47",
+        "https://liv-daliberti.github.io/research/illusion-of-insight/",
+        "https://liv-daliberti.github.io/research/illusion-of-insight/paper.pdf"
+      ]
+    },
+    "uav-explainability": {
+      "title": "Explainability for Unmanned Aerial Vehicle Control via Multi-Objective Reinforcement Learning",
+      "cohort": "reference",
+      "landing_page": null,
+      "work_urls": [
+        "https://ieeexplore.ieee.org/document/11068676",
+        "https://doi.org/10.1109/AERO63441.2025.11068676"
+      ]
+    },
+    "blindfl": {
+      "title": "BlindFL: Segmented Federated Learning with Fully Homomorphic Encryption",
+      "cohort": "reference",
+      "landing_page": null,
+      "work_urls": [
+        "https://arxiv.org/abs/2501.11659"
+      ]
+    },
+    "grounded-retrieval": {
+      "title": "Grounded-Retrieval Adversarial Imitation Loop: Integrating Language, Agent, and World Models",
+      "cohort": "reference",
+      "landing_page": null,
+      "work_urls": [
+        "https://openreview.net/forum?id=MdmszyLpVu",
+        "https://openreview.net/pdf?id=MdmszyLpVu"
+      ]
+    },
+    "pets-tutorial": {
+      "title": "Privacy-Enhancing Technologies for AI Systems: A Tutorial",
+      "cohort": "reference",
+      "landing_page": null,
+      "work_urls": [
+        "https://doi.org/10.1145/3643651.3659889",
+        "https://dl.acm.org/doi/10.1145/3643651.3659889"
+      ]
+    },
+    "pets-ai-systems": {
+      "title": "Privacy-Enhancing Technologies for Artificial Intelligence-Enabled Systems",
+      "cohort": "reference",
+      "landing_page": null,
+      "work_urls": [
+        "https://arxiv.org/abs/2404.03509"
+      ]
+    },
+    "protecting-data-in-use": {
+      "title": "Privacy-Enhancing Technologies (PETs): Protecting Data In Use",
+      "cohort": "reference",
+      "landing_page": null,
+      "work_urls": [
+        "https://www.leidos.com/sites/leidos/files/2023-07/D-23-15149_Privacy-Enhancing%20Technologies%20%28PET%29%20White%20Paper.pdf",
+        "https://www.leidos.com/insights/what-are-privacy-enhancing-technologies"
+      ]
+    }
+  },
+  "query_panel": [
+    {
+      "id": "rlvr-mode-collapse-01",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "Does reinforcement learning with verifiable rewards reduce the diversity of correct solutions?",
+      "query_sha256": "aaa3784d12ca974672a48e6d9615a108ba913096fa627b24081e8532e9ad49c5",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-02",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "How can we measure solution mode collapse in reasoning language models?",
+      "query_sha256": "26b51380cea2de9325faff66ac600e36f7588122854d3f7a1cc0cd8214718cf1",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-03",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "Can a reasoning model become more accurate while discovering fewer solution strategies?",
+      "query_sha256": "e49ba76ea0755049d249ca1e24e083db74f20005a2533a228b8d40b0b5db02ae",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-04",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "What benchmarks measure multiple correct solution modes after RLVR training?",
+      "query_sha256": "c38005e9ef8e0ac743140303a6e234b898f1b676c2b0342269c4397f2b5765c3",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-05",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "How can replay buffers preserve different correct answers during language model reinforcement learning?",
+      "query_sha256": "9d365942763c11ec6619b413ea57a8faed3eb963d82f8f97f898bae794bed2b6",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-06",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "Why does rewarding only correctness cause reasoning models to repeat familiar solutions?",
+      "query_sha256": "80d5764502820f1191c2c4947ff62a9dfc6b57f95dde04d3b7efb5f749a6deb8",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-07",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "How can we preserve solution diversity without sacrificing accuracy in RLVR?",
+      "query_sha256": "49c793f177ee08f1cd191fff760af9775aeaa9ea04f974384911302797dfea59",
+      "query_type": "topic"
+    },
+    {
+      "id": "rlvr-mode-collapse-08",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "What is ModeBench and how does it evaluate solution diversity?",
+      "query_sha256": "28ba15e73460fd2a6eadb36a89a44e136b245ae1ba33c7f52111542999bed26b",
+      "query_type": "identifier"
+    },
+    {
+      "id": "rlvr-mode-collapse-09",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "How does Re:Max use verified solution modes during reinforcement learning?",
+      "query_sha256": "4ded89e4f95c511ed79c9347fa4451076adf9e287a0db3c98b092258727586e3",
+      "query_type": "identifier"
+    },
+    {
+      "id": "rlvr-mode-collapse-10",
+      "paper_id": "rlvr-mode-collapse",
+      "query": "Which research studies the loss of different correct reasoning strategies during RL post-training?",
+      "query_sha256": "b6c9dbbf90da792a40a042a4639868da92aabbe593337653d8879c74bc785882",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-01",
+      "paper_id": "behavior-consistent-rl",
+      "query": "How can reinforcement learning produce similar policies across different training runs?",
+      "query_sha256": "920503a19bee5421c5b62f590c5f9cb1d84b66cef282d5fc509ffd8920f64745",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-02",
+      "paper_id": "behavior-consistent-rl",
+      "query": "Why do deep reinforcement learning agents behave differently across random seeds?",
+      "query_sha256": "61fcb1d88bd2bd6c60ea37ef85fe322f9af02a21c731766df10a28bb99d0b12b",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-03",
+      "paper_id": "behavior-consistent-rl",
+      "query": "Can maximum entropy reinforcement learning improve behavioral consistency?",
+      "query_sha256": "ba1dc070b50fd85af09bc947ef475cf7d0175baab27f7172267cc938de1a992e",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-04",
+      "paper_id": "behavior-consistent-rl",
+      "query": "How does critic disagreement help control policy divergence in reinforcement learning?",
+      "query_sha256": "d1d33c278241ea8b33098509be9785625b7f702ffc469f9ca0313ce6ae3eb339",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-05",
+      "paper_id": "behavior-consistent-rl",
+      "query": "How can state dependent entropy temperatures reduce variance across RL runs?",
+      "query_sha256": "4ce4c0322676257fbda6363b6e654f40e33bdfb24dd67bef493ea0ecfe18a63f",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-06",
+      "paper_id": "behavior-consistent-rl",
+      "query": "What is Q-value Expectile Disagreement in reinforcement learning?",
+      "query_sha256": "23333c9e4840cedf4a90e1ae5f8eb0d7752096b787436af7aa130cbf65fdd8ce",
+      "query_type": "identifier"
+    },
+    {
+      "id": "behavior-consistent-rl-07",
+      "paper_id": "behavior-consistent-rl",
+      "query": "How can we reduce cross-run policy KL divergence without reducing return?",
+      "query_sha256": "b8bbe914f3a545e2df59d63b5a9f3af7020fb898bc9bd7533d7e36d110dae3af",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-08",
+      "paper_id": "behavior-consistent-rl",
+      "query": "What is the difference between consistent returns and consistent behavior in reinforcement learning?",
+      "query_sha256": "f56a732f1e583161c05c67e90ca6e2bafffbe1b7d3a9b72638cdd382a8e5feb8",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-09",
+      "paper_id": "behavior-consistent-rl",
+      "query": "What are the tradeoffs of increasing entropy to stabilize deep RL policies?",
+      "query_sha256": "8ea0912a5bbea3407459de884e4e59b0bb9de2263abff484143cef45d0d7c230",
+      "query_type": "topic"
+    },
+    {
+      "id": "behavior-consistent-rl-10",
+      "paper_id": "behavior-consistent-rl",
+      "query": "Which methods improve reproducibility of behavior in continuous control reinforcement learning?",
+      "query_sha256": "4eca1798aa3a557ea83c021aa1216c21177c0c0e29ab5925b59abf5d0bf0d306",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-01",
+      "paper_id": "illusion-of-insight",
+      "query": "Do reasoning language models actually have aha moments?",
+      "query_sha256": "5844c197c9813ac7795b58b09c1e4009e27aa4fed91e3d9d7e919fb1cfd4dbbd",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-02",
+      "paper_id": "illusion-of-insight",
+      "query": "Do mid-reasoning strategy shifts improve language model accuracy?",
+      "query_sha256": "e0724a90c296270e83a1d0af43f545da330569d378f2794fc1dfec435d40d052",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-03",
+      "paper_id": "illusion-of-insight",
+      "query": "Is self correction in reasoning models evidence of genuine insight?",
+      "query_sha256": "a87629fde8c5cc90468a793d5e7df8686f8d2fd4df374e6978eeb20bf936538d",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-04",
+      "paper_id": "illusion-of-insight",
+      "query": "How often do reasoning models change their approach within a reasoning trace?",
+      "query_sha256": "2c4450bc8ff0b87b04aa9a46209c6bcbf265a0d5757d4144057ea5a9aae86f5a",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-05",
+      "paper_id": "illusion-of-insight",
+      "query": "Does reinforcement learning make intrinsic self correction more frequent?",
+      "query_sha256": "9fd0009fa59d28213b6fbc4e40b239cf44307ba589107318e7243457977d5510",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-06",
+      "paper_id": "illusion-of-insight",
+      "query": "What does model uncertainty tell us about when to interrupt a reasoning trace?",
+      "query_sha256": "446a13658af815be6465a540e7a2ff31acf0bd0b936b864dbc972b59988e16a2",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-07",
+      "paper_id": "illusion-of-insight",
+      "query": "Can triggering a reasoning shift at high entropy improve model accuracy?",
+      "query_sha256": "468e08587d7162ed24b619f384a2bc66c126b01e651334b5d75bbc07156ef973",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-08",
+      "paper_id": "illusion-of-insight",
+      "query": "What large scale evidence tests aha moments in reasoning models?",
+      "query_sha256": "bd07ccd178e23c6e658dab3d26590f735f03de019c353df363fb9d29c78411f4",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-09",
+      "paper_id": "illusion-of-insight",
+      "query": "How do decoding temperature and architecture affect reasoning shifts?",
+      "query_sha256": "dfb2940b234b96aa68c38bd7cefb693b962b8a7561eeb6f070f5f30ee7a58d4c",
+      "query_type": "topic"
+    },
+    {
+      "id": "illusion-of-insight-10",
+      "paper_id": "illusion-of-insight",
+      "query": "What is the difference between intrinsic and externally triggered reasoning shifts?",
+      "query_sha256": "f35c42aa4332c2a0c6ce68ee4550c70a397ebec9c18d6a9409ead912bb36d915",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-01",
+      "paper_id": "uav-explainability",
+      "query": "How can multi-objective reinforcement learning make drone control explainable?",
+      "query_sha256": "cf2578f95eb698b74a11885dc64229cbd6638829edaf77f1345af1371d0169e3",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-02",
+      "paper_id": "uav-explainability",
+      "query": "What research studies explainability for autonomous UAV control policies?",
+      "query_sha256": "334f15097cc56fecf40225316813d3ff4206541292a82e3973b26df6c0d29e07",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-03",
+      "paper_id": "uav-explainability",
+      "query": "How can we understand competing objectives in reinforcement learning for aerial vehicles?",
+      "query_sha256": "270de65bea71b1cf69f64a5d673c0ca47b8a8b1069b5ec163ba88cd92eae162b",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-04",
+      "paper_id": "uav-explainability",
+      "query": "Can multi-objective reinforcement learning help explain an unmanned aerial vehicle's decisions?",
+      "query_sha256": "4f25077ace6ffb66163f43186adfc91334e37f61b5ef0a1da4d164a07244c787",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-05",
+      "paper_id": "uav-explainability",
+      "query": "What methods make learned UAV control behavior interpretable?",
+      "query_sha256": "eb05e5b3128e81f9bc568ec1e156db40cfb3aa884e3cd6d49f26ebcd4ea9bfc3",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-06",
+      "paper_id": "uav-explainability",
+      "query": "How can autonomous drone control policies communicate objective tradeoffs?",
+      "query_sha256": "79461dff35d4c212d6fd6a16de8dbbe741b45072e043c4c387848fbdb43e2eb5",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-07",
+      "paper_id": "uav-explainability",
+      "query": "What are applications of explainable reinforcement learning in aerospace?",
+      "query_sha256": "7bed704fef478f03892bec110e97738289328a4f08502d77f7ceddbef75b90a0",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-08",
+      "paper_id": "uav-explainability",
+      "query": "How is multi-objective RL used to analyze unmanned aerial vehicle control?",
+      "query_sha256": "2514f237fde9e452d054aaf0a417a70639b5df7379d01283dec8a39f07b38760",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-09",
+      "paper_id": "uav-explainability",
+      "query": "Which IEEE Aerospace papers study explainable reinforcement learning for UAVs?",
+      "query_sha256": "9efc24756223949fc02e75f4edb55cb9cfb667cc9cd0e2db270f629f3f7cd22a",
+      "query_type": "topic"
+    },
+    {
+      "id": "uav-explainability-10",
+      "paper_id": "uav-explainability",
+      "query": "How can we compare UAV actions under different reinforcement learning objectives?",
+      "query_sha256": "8e6e81e0bf8c0bcc7a981a2a000bc8052c7c996413d1b6faba1c25c8531b6721",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-01",
+      "paper_id": "blindfl",
+      "query": "How can federated learning protect model updates against gradient inversion attacks?",
+      "query_sha256": "a29a1f12d6a199266050c990ee7039339e8b914f743ddf5c917f789a7f512003",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-02",
+      "paper_id": "blindfl",
+      "query": "Can fully homomorphic encryption make federated aggregation efficient?",
+      "query_sha256": "24bf532b83e5a7763781f9657775bbda31a2b8f35da2e3f82a15ce7a73784cfe",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-03",
+      "paper_id": "blindfl",
+      "query": "How does encrypting subsets of model updates affect federated learning communication costs?",
+      "query_sha256": "aa5aa123f73d07d617f055c9453902e6afa25c120e1e5be831f87d2f87b5efb7",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-04",
+      "paper_id": "blindfl",
+      "query": "What is BlindFL and how does segmented federated learning work?",
+      "query_sha256": "24a97bdf9e45be43ac01ccde3ddd08a3aa6a1b4c85ea3d1991660a3d4d788687",
+      "query_type": "identifier"
+    },
+    {
+      "id": "blindfl-05",
+      "paper_id": "blindfl",
+      "query": "How can encrypted federated learning defend against malicious clients?",
+      "query_sha256": "13a793ef4d3b1f659c90c802ce030e1224ae7963e6424b04f4e2e16a4b0392fa",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-06",
+      "paper_id": "blindfl",
+      "query": "Does encrypting federated model updates also protect against model poisoning?",
+      "query_sha256": "da644d071101a9dba5bbdcfb7f83540ecabcbc4f9bf090d07e9b83d88859fbc4",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-07",
+      "paper_id": "blindfl",
+      "query": "How can federated learning reduce encrypted update transmission costs without losing accuracy?",
+      "query_sha256": "9595aa15b98751fecd833e1468b03d444267a734db5897d849ecb9b6890ca4cc",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-08",
+      "paper_id": "blindfl",
+      "query": "What privacy risks remain when federated learning sends model updates to a server?",
+      "query_sha256": "49107002a02323ff0a8e75f6911161bfef2d4caeb65c4ace0f5c8b42dd914087",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-09",
+      "paper_id": "blindfl",
+      "query": "What are the tradeoffs between fully homomorphic encryption and accuracy in federated learning?",
+      "query_sha256": "392ec5a7a5db2ac27f6f56f4d6c6f9c4e1faaef1ead5c2a05968385390c5b963",
+      "query_type": "topic"
+    },
+    {
+      "id": "blindfl-10",
+      "paper_id": "blindfl",
+      "query": "Which federated learning methods address both gradient inversion and client-side poisoning?",
+      "query_sha256": "9c2c5c918f820cfc6339b48cd63acb5197dd8dcd2c1fa83e62855faf1ec6e19d",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-01",
+      "paper_id": "grounded-retrieval",
+      "query": "How can language models, agent models, and world models be integrated?",
+      "query_sha256": "7c29f3a1d04d3187843329b1bc1506a0749d83dceae28bf51c295705f7382f6b",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-02",
+      "paper_id": "grounded-retrieval",
+      "query": "What is a grounded retrieval adversarial imitation loop?",
+      "query_sha256": "b6f31820c0b08e0473b538d04b49a149483b0a659d3a739555cbbd5029af5ac2",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-03",
+      "paper_id": "grounded-retrieval",
+      "query": "How can grounded retrieval be combined with imitation learning?",
+      "query_sha256": "124582ef2434feb1c550ece416b09d6f42921df420ef041214a21478d99a807f",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-04",
+      "paper_id": "grounded-retrieval",
+      "query": "What research connects adversarial imitation learning with language models?",
+      "query_sha256": "6a6b93da1c902344c204a56a60d135a576ccec162f409b40b0bee14772d7aec3",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-05",
+      "paper_id": "grounded-retrieval",
+      "query": "How can world models support language agents in reasoning and planning?",
+      "query_sha256": "e91bba55c240913ee86cc6fda0d227234a5845577209b3f39241ff888b5c8137",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-06",
+      "paper_id": "grounded-retrieval",
+      "query": "What methods combine retrieval and agent learning with environment models?",
+      "query_sha256": "71ae987d1e52c8c5c564a43b81f91047d6611464784eebdd77b9542194eabc17",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-07",
+      "paper_id": "grounded-retrieval",
+      "query": "Which research studies grounded retrieval for language agent world model integration?",
+      "query_sha256": "518ac38a3d0c6ee324c931c4c42a99d6dd6a0554e6792f59204d2a825ad99a12",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-08",
+      "paper_id": "grounded-retrieval",
+      "query": "How can imitation learning bridge language and agent models?",
+      "query_sha256": "662fd50a45d96f2636096e7d8e9443eaa4bd9fddb46273e6c62c999a5be9a9ba",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-09",
+      "paper_id": "grounded-retrieval",
+      "query": "Which NeurIPS 2025 LAWS workshop papers integrate language, agent, and world models?",
+      "query_sha256": "af9e90e884f68c0e4c72eab308c418e21f9c9a37370fb4f6e8b93fdf0f71fb13",
+      "query_type": "topic"
+    },
+    {
+      "id": "grounded-retrieval-10",
+      "paper_id": "grounded-retrieval",
+      "query": "How does the Grounded-Retrieval Adversarial Imitation Loop relate to agent planning?",
+      "query_sha256": "fc4ed7ff3a775cb1756a1f23dda9192fae5ddf0ec0c541cfc51c2ec698c85dc7",
+      "query_type": "identifier"
+    },
+    {
+      "id": "pets-tutorial-01",
+      "paper_id": "pets-tutorial",
+      "query": "Where can I find a tutorial on privacy enhancing technologies for AI systems?",
+      "query_sha256": "e66aaddad028295109fcef83d92454800d1f8bcc2658d3d26ebfa8637b390393",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-02",
+      "paper_id": "pets-tutorial",
+      "query": "Which privacy enhancing technologies address privacy threats in AI systems?",
+      "query_sha256": "e1301dff16e8edaed3b034eca59b0ed21bc933b099688779b272b29b989b4b3d",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-03",
+      "paper_id": "pets-tutorial",
+      "query": "How should an AI system designer choose between privacy enhancing technologies?",
+      "query_sha256": "b0ce5fbd3458799508b0a6001730c896c6815f581a6aeda3c375b02dd71e3b19",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-04",
+      "paper_id": "pets-tutorial",
+      "query": "How can privacy enhancing technologies protect AI model owners and users?",
+      "query_sha256": "82eed1b8804bfb50ddc16b4a2942c86e2d0d31eab242e4043438d88f185cf7b8",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-05",
+      "paper_id": "pets-tutorial",
+      "query": "What are introductory resources on protecting data in use for AI?",
+      "query_sha256": "c719cb6f6ff9a06f146157a7937bf334e11ae3da1780f2fa86e9da2003975389",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-06",
+      "paper_id": "pets-tutorial",
+      "query": "What privacy threats arise during AI development, deployment, and inference?",
+      "query_sha256": "498bfe3cb15408c4c03670572d3222fc5704ace84c684140968ac397d0cd8797",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-07",
+      "paper_id": "pets-tutorial",
+      "query": "How do homomorphic encryption and trusted execution environments apply to AI systems?",
+      "query_sha256": "1a5c6516738ec4bddbf3f24b36a068b543aae563de4c68de436279a9dd553ed8",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-08",
+      "paper_id": "pets-tutorial",
+      "query": "What tutorial on AI privacy was presented at IWSPA 2024?",
+      "query_sha256": "24d223423ed89817a93c5fb2ded43ab0bea9cdcd05e39ca5ced86388d59dd7da",
+      "query_type": "identifier"
+    },
+    {
+      "id": "pets-tutorial-09",
+      "paper_id": "pets-tutorial",
+      "query": "How can privacy technologies affect an AI system's performance and architecture?",
+      "query_sha256": "d4c82916fcb9566bb6ba3d865632964bf3f05becb85b978e75cb5245894dc64e",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-tutorial-10",
+      "paper_id": "pets-tutorial",
+      "query": "What framework helps evaluate privacy enhancing technologies for AI?",
+      "query_sha256": "fee9d48da5bdbe701ec074296787d554fef374ceb2d03b82b88a8dda0edc4eb8",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-01",
+      "paper_id": "pets-ai-systems",
+      "query": "How can AI enabled systems protect confidential data while it is being used?",
+      "query_sha256": "607cc5345a86d1db1c3621ebbaa9fd0acdf108ef46f0138036f6019574fda8ba",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-02",
+      "paper_id": "pets-ai-systems",
+      "query": "How do privacy threats differ across the lifecycle of an AI system?",
+      "query_sha256": "61c62f9aba343434e8f95da5f56222be44be40a46bc1dbe5ec1d12dfe94f2225",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-03",
+      "paper_id": "pets-ai-systems",
+      "query": "What framework evaluates privacy enhancing technologies at the system level?",
+      "query_sha256": "1eb2c7ffdd0d9bec213d1b6662e7504975757fc2fbe3f7147f46f46bdd646086",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-04",
+      "paper_id": "pets-ai-systems",
+      "query": "How can AI systems defend against internal and external privacy threats?",
+      "query_sha256": "1558078070fa9e729d75d18a5685d66b6c84bc6b6f51bfef84cbbb0866e09735",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-05",
+      "paper_id": "pets-ai-systems",
+      "query": "What is the difference between privacy and confidentiality for AI systems?",
+      "query_sha256": "d99ee28ad07a69c1672f7ef95146f01cdbc6d95c863a101b2a24cfee4b1d07fa",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-06",
+      "paper_id": "pets-ai-systems",
+      "query": "How can homomorphic encryption, federated learning, and trusted execution environments protect AI data?",
+      "query_sha256": "1316af5f5eeb1b51ce1c55d672a16edad1807c5889564f7491d53b8c6eb9db75",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-07",
+      "paper_id": "pets-ai-systems",
+      "query": "What system level tradeoffs matter when selecting privacy technologies for AI?",
+      "query_sha256": "f3e22776a35659b303b06dfc035057b805f7c1f64c2a782f811a6422fd822d84",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-08",
+      "paper_id": "pets-ai-systems",
+      "query": "Why is encryption at rest and in transit insufficient to protect AI data in use?",
+      "query_sha256": "ede313e6759f3043416a3cfe22585e1c08e214a1cdfe22b89c41148d2d1baa7a",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-09",
+      "paper_id": "pets-ai-systems",
+      "query": "What research compares privacy enhancing technologies for artificial intelligence enabled systems?",
+      "query_sha256": "1796c972c474c188c139c9edb84bcc03656597390704fcea34c9ef8e85d3aa34",
+      "query_type": "topic"
+    },
+    {
+      "id": "pets-ai-systems-10",
+      "paper_id": "pets-ai-systems",
+      "query": "How can privacy enhancing technologies protect both AI users and model owners?",
+      "query_sha256": "07f70eddb285bca1cff834c83ec97d75e4b355a0f9ec90072c340d41a8aad4b2",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-01",
+      "paper_id": "protecting-data-in-use",
+      "query": "What is the Leidos white paper Protecting Data In Use about?",
+      "query_sha256": "4544074ca2063575f23513706d546790b78161ec1205d5046db87ae9cb9286d3",
+      "query_type": "identifier"
+    },
+    {
+      "id": "protecting-data-in-use-02",
+      "paper_id": "protecting-data-in-use",
+      "query": "How do privacy enhancing technologies protect plaintext while data is processed?",
+      "query_sha256": "1329d63a6182ea9163a25df19afd0693dd9082878995e094934d98e4190c4283",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-03",
+      "paper_id": "protecting-data-in-use",
+      "query": "Which privacy enhancing technologies support secure collaboration between organizations?",
+      "query_sha256": "3eeb7c74e830c53100e536d360c01a197c2fce0a6bd2f4fc2a740a9d3a9b23e8",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-04",
+      "paper_id": "protecting-data-in-use",
+      "query": "How do system architects compare speed and scalability tradeoffs across privacy enhancing technologies?",
+      "query_sha256": "fa1b81afd68e48d0d4a2de390ee02312029b3d15e088d5888eeebaa2abe3fb18",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-05",
+      "paper_id": "protecting-data-in-use",
+      "query": "How can trusted execution environments protect data from a host operating system?",
+      "query_sha256": "8cecc0f6a2ea5d48f76a275efec410b6dee40d9b50d8efdcf256abd8b7d92bc4",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-06",
+      "paper_id": "protecting-data-in-use",
+      "query": "Why can federated learning require additional privacy protections?",
+      "query_sha256": "fbb89a2f6d93df0b418c7fed71d701334f0f926a527717090c596f648a960f19",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-07",
+      "paper_id": "protecting-data-in-use",
+      "query": "How do privacy enhancing technologies address careless insiders and malicious outsiders?",
+      "query_sha256": "54bee630db903759242a8a2cb5047bdfd6519d6dead8be7a6f88519a1fa3150e",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-08",
+      "paper_id": "protecting-data-in-use",
+      "query": "How can sensitive queries be obfuscated without losing useful search results?",
+      "query_sha256": "069dfb6bc45578a9490c83f5406db5fbac90ea1fb8240a98e8e54da707ef7b55",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-09",
+      "paper_id": "protecting-data-in-use",
+      "query": "What is the difference between fully homomorphic encryption and hardware protected computation?",
+      "query_sha256": "0721618baad76dce6572acef1b60a0e856581f9db6bb1ac13205e5d312dc5598",
+      "query_type": "topic"
+    },
+    {
+      "id": "protecting-data-in-use-10",
+      "paper_id": "protecting-data-in-use",
+      "query": "Can multiple privacy enhancing technologies be combined in one data protection architecture?",
+      "query_sha256": "d6d3bf04c997e641bd6dd6ea7511336cace98846736674b1e5771d14b90beb94",
+      "query_type": "topic"
+    }
+  ],
+  "content_sha256": {
+    "_pages/research-rlvr.html": "cfd4ee4770ff677baaf4e978333208c853324992524878461f6a216f395e5638",
+    "_pages/research-insight.md": "56d858e341119cd056806041e03ffeed796a373a5b22ced8562f07ad39298ba1",
+    "_pages/research-behavior.md": "9c44eba5be4649b54c8603e9f5517fae4a1d90d133b3edb75211d4f9edd96f5d",
+    "_data/research.json": "5495a3fb6421e66a221e0b1aaa5d7f672d1185c381c8c0722be2d15feccdc917",
+    "_layouts/research.liquid": "4d64f329f30fd231600188ee9043c81dd4ee17f7d9c28b1b1ae3d6618b131823",
+    "_includes/research_metadata.liquid": "f1af40fcbe80882782072b3fa1dfb3dd67ae89d3018eee7a6d8e31476af3f463"
+  },
+  "expected_paper_observations_per_day": 180
+}

@@ -1,0 +1,24 @@
+{
+  "rlvr_source_repository": "liv-daliberti/maxent-grpo",
+  "source_branch": "mode-collapse-blog",
+  "source_commit": "88901a3d6e997490a3003c2d7715d6bb0a4e0e41",
+  "reused": [
+    "public/index.html",
+    "public/figures/01-graph-six-colorings.png",
+    "public/figures/02-same-accuracy.png",
+    "public/figures/03-measured-concentration.png",
+    "public/figures/04-feedback.png",
+    "public/figures/05-sampling.png"
+  ],
+  "adaptations": [
+    "Integrated into the existing academic website layout",
+    "Added paper metadata, abstract, citation and maintained artifact links",
+    "Added an analytical sampling illustration",
+    "Added task definitions, metric interpretation and limitations"
+  ],
+  "paper_versions": {
+    "rlvr-mode-collapse": "2610.11064v2",
+    "illusion-of-insight": "2601.00514v2",
+    "behavior-consistent-rl": "2605.21214v3"
+  }
+}

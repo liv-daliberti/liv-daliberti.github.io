@@ -279,6 +279,14 @@ defaults:
       path: "google*.html"
     values:
       sitemap: false
+  - scope:
+      path: "research/rlvr-mode-collapse/paper.pdf"
+    values:
+      sitemap: false
+  - scope:
+      path: "research/illusion-of-insight/paper.pdf"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
@@ -375,6 +383,7 @@ filtered_bibtex_keywords:
     pdf,
     poster,
     preview,
+    research_page,
     selected,
     slides,
     supp,

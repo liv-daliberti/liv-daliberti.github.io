@@ -1,0 +1,29 @@
+{% assign research_paper = site.data.research[page.research_id] %}
+<meta name="citation_title" content="{{ research_paper.title | escape }}">
+{% for researcher in research_paper.authors %}
+  <meta name="citation_author" content="{{ researcher | escape }}">
+{% endfor %}
+<meta name="citation_publication_date" content="{{ research_paper.year }}">
+<meta name="citation_conference_title" content="{{ research_paper.venue | escape }}">
+{% if research_paper.local_pdf %}<meta name="citation_pdf_url" content="{{ research_paper.local_pdf | absolute_url }}">{% endif %}
+{% if research_paper.doi %}<meta name="citation_doi" content="{{ research_paper.doi }}">{% endif %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": {{ research_paper.paper_url | append: '#article' | jsonify }},
+    "name": {{ research_paper.title | jsonify }},
+    "headline": {{ research_paper.title | jsonify }},
+    "url": {{ research_paper.paper_url | jsonify }},
+    "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+    "abstract": {{ research_paper.abstract | jsonify }},
+    "datePublished": {{ research_paper.first_posted | jsonify }},
+    "author": [
+      {% for researcher in research_paper.authors %}
+        { "@type": "Person", "name": {{ researcher | jsonify }} }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ],
+    "sameAs": {{ research_paper.paper_versions | jsonify }},
+    "isPartOf": { "@type": "CreativeWork", "name": {{ research_paper.venue | jsonify }} }
+  }
+</script>
