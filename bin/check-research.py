@@ -65,6 +65,7 @@ def main():
         require(len(articles[0]["author"]) == len(paper["authors"]), f"{key}: author schema mismatch")
         require(paper["path"] in publications.links and paper["path"] in home.links, f"{key}: missing discovery link")
         require(paper["path"] in hub.links and "/research/" in doc.links, f"{key}: missing research hub link")
+        require(paper["image"] in hub.assets and paper["paper_url"] in hub.links, f"{key}: incomplete research hub resources")
         canonical = meta.canonicals[0]
         require(canonical in sitemap_urls and canonical in research_urls, f"{key}: absent from sitemap")
         lastmod = sitemap_urls[canonical].findtext("{*}lastmod")

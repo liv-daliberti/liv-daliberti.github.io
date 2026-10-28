@@ -13,7 +13,7 @@
   ],
   "measurement_note": "Discovery and metadata revision during the existing prospective follow-up; preserves the original launch date, 28-day window, frozen 90-question panel, and paper findings. Public HTTP access is not proof of Google indexing or AI citation. Search Console inspection remains necessary.",
   "content_sha256": {
-    "_pages/research.md": "3db9861ba10833d90b1a01eda0580943375214ba38f74fc9367ba9724f4db100",
+    "_pages/research.md": "412e7dd9702a5ace9bee8189d36b223b65d57d212748e98065307f0143e45936",
     "_pages/research-sitemap.xml": "4bc4f102261a5349253836d5daee5476f6abdfff7a6ea28d2513a2c50857c1fe",
     "_pages/research-rlvr.html": "f16ed798d81bf5d00a6838548c37f2bc6dcaebff634b9b55333a91f904d91b75",
     "_pages/research-insight.md": "fa75d0881242a7812153c867e5be5c1644fbaff2185bc98110d56d42b90919f1",
@@ -27,6 +27,7 @@
     "assets/css/research.css": "6758d356615e47fd8dbed840e9a9dc5a950c28e781913274a64674a03e0f1d8f",
     "robots.txt": "4c145b0c5cea4bf52d4182aa447005a18b2ca5be8ed873636cb72fa8d8da4263",
     ".github/workflows/deploy.yml": "d51671ecf6d6df8d02fb442389f22dd3008d4f7957c28fc891a881cd18ab123c",
-    "bin/check-research.py": "bd24fd71d36092c26db5ed1aea190153d9c126d1e8b9fb3f8259f6442c6fd1af"
+    "bin/check-research.py": "73c4a867d072005c345e6a77d1254f2d8bb6e56f9857a75f6c1ba3f3f59ad791",
+    "_includes/research_guides.liquid": "a47316be5cbc576c6720af6ca7f9632263b6f446d1bad78beed560951856a0f2"
   }
 }
