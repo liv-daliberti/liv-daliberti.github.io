@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
+        },{id: "nav-research-explained",
+          title: "Research explained",
+          description: "Illustrated guides to Liv d’Aliberti’s research on RLVR solution diversity, aha moments in reasoning models, and behavior-consistent reinforcement learning.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
         },{id: "nav-publications",
           title: "publications",
           description: "Publications by Liv G. d&#39;Aliberti on reinforcement learning, AI reasoning, interpretable decision-making, privacy-preserving computation, and applied machine learning.",
