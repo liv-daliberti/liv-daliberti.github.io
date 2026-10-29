@@ -1,0 +1,16 @@
+{
+  "id": "2026-10-29-research-hub-intro-removal",
+  "prepared_at": "2026-10-29T08:00:37-04:00",
+  "previous_publication_commit": "2cf8b059f429c7094305d46316461c1f6843b617",
+  "reason": "User requested removal of the research-hub introduction, question-selection paragraph, and visible subtitle.",
+  "changes": [
+    "Removed the two introductory paragraphs.",
+    "Hub opens directly with its title and paper guides.",
+    "Added a per-page flag to suppress the visible subtitle."
+  ],
+  "measurement_note": "Presentation copy edit during existing follow-up; frozen query panel and original launch unchanged.",
+  "content_sha256": {
+    "_pages/research.md": "f17c1c5671b3120179facadb9a4d589c421a68543da097337a0483601c8f0be7",
+    "_layouts/page.liquid": "b5d90061869c8a26af210f96d9caa41a6e01943c30173e0b36871b51ece8f03c"
+  }
+}

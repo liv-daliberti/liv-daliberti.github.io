@@ -6,12 +6,9 @@ description: Illustrated guides to Liv d’Aliberti’s research on RLVR solutio
 nav: true
 nav_order: 1.5
 research_hub: true
-last_modified_at: "2026-10-29T07:49:30-04:00"
+hide_description: true
+last_modified_at: "2026-10-29T08:00:37-04:00"
 ---
-
-How do we tell whether an AI system reasons reliably? These guides explain three complementary questions from my research, using figures from the papers, concrete examples, and the limits of what each experiment establishes.
-
-**Start with the question that matters to you:** can one model find multiple correct solutions, does reconsideration improve an answer, or do independently trained agents behave similarly?
 
 {% include research_guides.liquid %}
 
