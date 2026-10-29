@@ -1,7 +1,7 @@
 {
   "rlvr-mode-collapse": {
     "title": "Measuring and Mitigating Solution Mode Collapse in RLVR",
-    "question": "Can a reasoning model get more answers right while finding fewer ways to solve a problem?",
+    "question": "Do reasoning models get more answers right while finding fewer ways to solve a problem?",
     "authors": ["Liv G. d’Aliberti", "Marwa Abdulhai", "Sofiia Druchyna", "Peter Henderson", "Manoel Horta Ribeiro"],
     "venue": "The 6th Workshop on Mathematical Reasoning and AI at NeurIPS 2026",
     "status": "Accepted to MATH-AI 2026",

@@ -1,0 +1,16 @@
+{
+  "id": "2026-10-29-rlvr-question-wording",
+  "prepared_at": "2026-10-29T07:49:30-04:00",
+  "previous_publication_commit": "f9912d18976b23ecd9238b28349d6960a8331d7c",
+  "reason": "User requested exact revision of the shared RLVR research question.",
+  "before": "Can a reasoning model get more answers right while finding fewer ways to solve a problem?",
+  "after": "Do reasoning models get more answers right while finding fewer ways to solve a problem?",
+  "measurement_note": "Copy edit to the research hub, RLVR header, and related-research descriptions. Frozen question panel and original experiment launch/follow-up unchanged.",
+  "content_sha256": {
+    "_data/research.json": "8a899bb789426f57083edcc09ec86a2cedd78e9d3c3ed8de4519d6ae73e03174",
+    "_pages/research-rlvr.html": "f8d00d4356b6d02b5ca1a212f0997541a6201f11f890baef4270efb467d93408",
+    "_pages/research-insight.md": "3c88b350e20681c6d1646d03a39843766633420d370c45f9b70466bfc27e2515",
+    "_pages/research-behavior.md": "9f5e5b437df5256c1ef2892b0b150d694361ec638b22b7e222296612592b3560",
+    "_pages/research.md": "964aed1fd49325eeb46b1dcdba883d2e4ba2c9a82d4833b62377c1b3b016799c"
+  }
+}
